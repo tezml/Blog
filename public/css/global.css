@@ -1,0 +1,118 @@
+.shadow{
+    width:100%;
+    background:#000;
+    opacity:0.3;
+    filter:alpha(oapcity:30);
+    position:relative;
+    /*bottom: 0;
+    left: 0;*/
+}
+
+.blogshadow{
+    height: 30px;
+}
+.blogBox{
+    max-width: 100%;
+    margin: 0 auto;
+    width: 1288px;
+
+}
+.post-col {
+    border: 1px solid #d0d3d3;
+    border-radius: 5px;
+    position: relative;
+    width: 300px;
+    margin:10px;
+    float: left;
+}
+.post-col .share-btn {
+    opacity: 0.6;
+}
+.post-col:hover .share-btn {
+    opacity: 1;
+}
+.post-col .share-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+}
+.item-figure {
+    display: block;
+    height: 180px;
+    overflow: hidden;
+    width: 100%;
+}
+.item-figure img {
+    height: auto;
+    min-height: 180px;
+    width: 350px;
+}
+.post-item-title {
+    font-size: 16px;
+    height: 22px;
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 0 10px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.post-item-title a {
+    color: #333;
+    text-decoration:none;
+}
+.post-item-title a:hover {
+    /*color: #97c000;*/
+}
+.post-item-inner {
+    border-top: 1px solid #d0d3d3;
+    height: 130px;
+}
+.post-meta {
+    height: 20px;
+    line-height: 20px;
+    margin: 20px 10px 10px;
+    overflow: hidden;
+}
+.post-meta span {
+    color: #888;
+    padding: 0 10px 0 0;
+}
+.post-meta i.icon {
+    display: inline-block;
+    height: 20px;
+    text-indent: -9999px;
+    width: 22px;
+}
+.user .icon, .single-below-header .icon-github {
+    background-position: 0 -82px;
+}
+.time .icon, .single-below-header .date {
+    background-position: 0 -56px;
+}
+.cats .icon, .single-below-header .tags {
+    background-position: 0 -29px;
+}
+.single-below-header .comment, .post-more .comment {
+    background-position: 0 -140px;
+}
+.post-more .comment {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0 0 22px;
+}
+.post-item-inner p {
+    color: #888;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 15px 10px;
+}
+.icon{
+    background-image:url(../img/icon.png);
+    background-repeat:no-repeat;
+}
+.green{
+    color: #6633CC;
+}

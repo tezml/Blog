@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Magnetic - Stunning Responsive HTML5/CSS3 Photography Template</title>
-	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../css/reset.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script type="text/javascript" src="../js/jquery.js"></script>
-   <!--  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> -->
-    <script type="text/javascript" src="../js/map.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-
+    <title>Magnetic - Stunning Responsive HTML5/CSS3 Photography Wensite Template</title>
+    <meta charset="utf-8">
+    <meta name="author" content="pixelhint.com">
+    <meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/global.css">
+    <script type="text/javascript" src="../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../public/js/main.js"></script>
+    <style>
+        .blogCaption h1{
+            color: #ffffff!important;
+        }
+    </style>
 </head>
 <body>
 
-	<header>
-		<div class="logo">
-			<a href="../index.html"><img src="../img/logo.png" title="Magnetic" alt="Magnetic"/></a>
-		</div><!-- end logo -->
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="../public/img/logo.png" title="Magnetic" alt="Magnetic"/></a>
+    </div><!-- end logo -->
 
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
-				<li><a href="../index.html">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">The Team</a></li>
-				<li><a href="#">Journal</a></li>
-				<li><a href="contact.html" class="selected">Contact Us</a></li>
-			</ul>
-		</nav><!-- end navigation menu -->
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Message Boards</a></li>
+            <li><a href="contact.html" class="selected">Contact Me</a></li>
+        </ul>
+    </nav><!-- end navigation menu -->
 
-		<div class="footer clearfix">
-			<ul class="social clearfix">
-				<li><a href="#" class="fb" data-title="Facebook"></a></li>
-				<li><a href="#" class="google" data-title="Google +"></a></li>
-				<li><a href="#" class="behance" data-title="Behance"></a></li>
-				<!--<li><a href="#" class="twitter" data-title="Twitter"></a></li>
-				<li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
-				<li><a href="#" class="rss" data-title="RSS"></a></li>
-			</ul><!-- end social -->
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            <li><a href="#" class="fb" data-title="Facebook"></a></li>
+            <li><a href="#" class="twitter" data-title="Twitter"></a></li>
+            <li><a href="#" class="behance" data-title="Behance"></a></li>
+            <li><a href="#" class="dribble" data-title="Dribble"></a></li>
+        </ul><!-- end social -->
 
-			<div class="rights">
-				<p>Copyright © 2014 magnetic.</p>
-				<p>Template by <a href="">Pixelhint.com</a></p>
-			</div><!-- end rights -->
-		</div ><!-- end footer -->
-	</header><!-- end header -->
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a href="">Pixelhint.com</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
 
-	<section class="main clearfix" id="map">
-	</section><!-- end main/map -->
-	
+<section class="main clearfix">
+    <div class="work">
+        <div class="blogCaption" style="background: #339999">
+            <div class="work_title">
+                <h1>图册类型</h1>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <img src="../public/img/work1.jpg" class="media"  style="width: 99.9%" alt=""/>
+    </div>
+    <div class="work">
+        <div class="blogCaption" style="background: #339933">
+            <div class="work_title">
+                <h1>图册类型</h1>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="blogCaption" style="background: #666699">
+            <div class="work_title">
+                <h1>图册类型</h1>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="blogCaption" style="background: #996699">
+            <div class="work_title">
+                <h1>图册类型</h1>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="blogCaption" style="background: #336699">
+            <div class="work_title">
+                <h1>图册类型</h1>
+            </div>
+        </div>
+    </div>
+</section><!-- end main -->
+
 </body>
+<script>
+    $(window).resize(function() {
+        $(".blogCaption").height($(".blogCaption").width())
+    })
+        $(".blogCaption").height($(".blogCaption").width())
+</script>
 </html>
