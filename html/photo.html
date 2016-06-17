@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Magnetic - Stunning Responsive HTML5/CSS3 Photography Template</title>
+    <meta charset="utf-8">
+    <meta name="author" content="pixelhint.com">
+    <meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="/img/logo.png" title="Magnetic" alt="Magnetic"/></a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Message Boards</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            <li><a href="#" class="fb" data-title="Facebook"></a></li>
+            <!--<li><a href="#" class="google" data-title="Google +"></a></li>-->
+            <li><a href="#" class="behance" data-title="Behance"></a></li>
+            <li><a href="#" class="twitter" data-title="Twitter"></a></li>
+            <!--<li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+            <li><a href="#" class="rss" data-title="RSS"></a></li>
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2016 tezml.</p>
+            <p>Template by <a href="">Tezml.com</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+<section class="main clearfix" id="box">
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+    <ul class="waterFlow"></ul>
+</section><!-- end main -->
+
+</body>
+<script>
+    function rnd(n,m)
+    {
+        return parseInt(n+Math.random()*(m-n));
+    }
+
+    function createLi()
+    {
+        var oLi = document.createElement('li');
+        oLi.style.height=rnd(150,501)+'px';
+        oLi.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+        return oLi;
+    }
+
+
+
+    window.onload=function(){
+        var oBox =document.getElementById('box');
+        var aUl = oBox.children;
+        function create()
+        {
+            for(var i=0;i<20;i++){
+                var oLi = createLi();
+                var arr = [];
+                for(var j=0;j<aUl.length;j++){
+                    arr.push(aUl[j]);
+                }
+                arr.sort(function(u1,u2){
+                    return u1.scrollHeight-u2.scrollHeight;
+                });
+                arr[0].appendChild(oLi);
+            }
+        }
+
+        create();
+
+        window.onscroll=function(){
+            var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+            if(scrollTop>=document.body.scrollHeight-document.documentElement.clientHeight-500){
+                create();
+            }
+        };
+    };
+</script>
+
+</html>

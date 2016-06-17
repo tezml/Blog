@@ -1,0 +1,87 @@
+html
+    body
+        | doctype html
+        | html(lang='en')
+        | head
+        | title Magnetic - Stunning Responsive HTML5/CSS3 Photography Template
+        | meta(charset='utf-8')
+        | meta(name='author', content='pixelhint.com')
+        | meta(name='description', content='Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template')
+        | meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+        | link(rel='stylesheet', type='text/css', href='/css/global.css')
+        | link(rel='stylesheet', type='text/css', href='/css/reset.css')
+        | link(rel='stylesheet', type='text/css', href='/css/main.css')
+        | script(type='text/javascript', src='/js/jquery.js')
+        | script(type='text/javascript', src='/js/main.js')
+        | body
+        | header
+        | .logo
+        | a(href='index.html')
+        | img(src='/img/logo.png', title='Magnetic', alt='Magnetic')
+        | // end logo
+        | #menu_icon
+        | nav
+        | ul
+        | li
+        | a(href='index.html') Home
+        | li
+        | a(href='blog.html') Blog
+        | li
+        | a(href='gallery.html') Gallery
+        | li
+        | a(href='board.html') Message Boards
+        | li
+        | a(href='contact.html') Contact Me
+        | // end navigation menu
+        | .footer.clearfix
+        | ul.social.clearfix
+        | li
+        | a.fb(href='#', data-title='Facebook')
+        | //
+        li
+            a.google(href='#', data-title='Google +')
+        |           li
+        |             a.behance(href='#', data-title='Behance')
+        |           li
+        |             a.twitter(href='#', data-title='Twitter')
+        |           //
+        li
+            a.dribble(href='#', data-title='Dribble')
+        |           li
+        |             a.rss(href='#', data-title='RSS')
+        |         // end social
+        |         .rights
+        |           p Copyright © 2016 tezml.
+        |           p
+        |             | Template by
+        |             a(href='') Tezml.com
+        |         // end rights
+        |       // end footer
+        |     // end header
+        |     section#box.main.clearfix
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |       ul.waterFlow
+        |     // end main
+        |   script.
+        |     function rnd(n,m)
+        |     {
+        |     return parseInt(n+Math.random()*(m-n));
+        |     }
+        |     function createLi()
+        |     {
+        |     var oLi = document.createElement('li');
+        |     oLi.style.height=rnd(150,501)+'px';
+        |     oLi.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+        |     return oLi;
+        |     }
+        |     window.onload=function(){
+        |     var oBox =document.getElementById('box');
+        |     var aUl = oBox.children;
+        |     function create()
+        |     {
+        |     for(var i=0;i

@@ -116,3 +116,20 @@
 .green{
     color: #6633CC;
 }
+.waterFlow{width:200px; border:1px solid red; margin:10px; float:left;}
+.waterFlow li{width:100%; height:0; background:#ccc; margin:10px 0;}
+#box{
+    margin: 0 auto;
+    /* width: 100%;*/
+}
+
+
+
+
+
+
+
+
+
+
+
