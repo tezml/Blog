@@ -1,0 +1,31 @@
+extends ../layout
+block content
+        section.main.clearfix
+            .work
+                .blogCaption(style='background: #339999')
+                    .work_title
+                        h1 图册类型
+            .work
+                img.media(src='/img/work1.jpg', style='width: 99.9%', alt='')
+            .work
+                .blogCaption(style='background: #339933')
+                    .work_title
+                        h1 图册类型
+            .work
+                .blogCaption(style='background: #666699')
+                    .work_title
+                        h1 图册类型
+            .work
+                .blogCaption(style='background: #996699')
+                    .work_title
+                        h1 图册类型
+            .work
+                .blogCaption(style='background: #336699')
+                    .work_title
+                        h1 图册类型
+        // end main
+    script.
+        $(window).resize(function() {
+            $(".blogCaption").height($(".blogCaption").width())
+        })
+        $(".blogCaption").height($(".blogCaption").width())
