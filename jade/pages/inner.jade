@@ -6,13 +6,13 @@ block content
                     .work_nav
                         ul.btn.clearfix
                             li
-                                a.previous(href='#', data-title='Previous')
+                                a.previous(href='inner/#{data.id}', data-title='Previous')
                             li
-                                a.grid(href='index.html', data-title='Portfolio')
+                                a.grid(href='/blog', data-title='Portfolio')
                             li
-                                a.next(href='#', data-title='Next')
+                                a.next(href='inner/#{data.id}', data-title='Next')
                     // end work_nav
-                    h1.title Sed do eiusmod tempor incididunt ut labore et dolore seed magna aliqua.
+                    h1.title #{data.title}
             // end top
             section.wrapper
                 .content
