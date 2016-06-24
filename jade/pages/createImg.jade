@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+        title tezml--上传图片
+        link(rel='stylesheet', type='text/css', href='/css/webuploader.css')
+        link(rel='stylesheet', type='text/css', href='/css/style.css')
+    body
+        #wrapper
+            #container
+                // 头部，相册选择和格式选择
+                #uploader
+                    .queueList
+                        #dndArea.placeholder
+                            #filePicker
+                            p 或将照片拖到这里，单次最多可选300张
+                    .statusBar(style='display:none;')
+                        .progress
+                            span.text 0%
+                            span.percentage
+                        .info
+                        .btns
+                            #filePicker2
+                            .uploadBtn 开始上传
+        script(type='text/javascript', src='/js/jquery.js')
+        script(type='text/javascript', src='/js/webuploader.js')
+        script(type='text/javascript', src='/js/upload.js')
+                   
