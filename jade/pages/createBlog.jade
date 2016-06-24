@@ -3,14 +3,19 @@ html
     head
         title tezml--后台创建博客页
         meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+        link(rel='stylesheet', type='text/css', href='/css/global.css')
         script(type='text/javascript', src='/js/jquery.js')
         script(type='text/javascript', src='/js/main.js')
         script(type='text/javascript', src='/js/tezml.js')
-        script(type='text/javascript', charset='utf-8', src='ueditor/ueditor.config.js')
-        script(type='text/javascript', charset='utf-8', src='ueditor/_examples/editor_api.js')
-        script(type='text/javascript', charset='utf-8', src='js/edu.js')
+        script(type='text/javascript', charset='utf-8', src='/ueditor/ueditor.config.js')
+        script(type='text/javascript', charset='utf-8', src='/ueditor/_examples/editor_api.js')
+        script(type='text/javascript', charset='utf-8', src='/js/edu.js')
     body
         form#form(method='post', target='_blank')
+            div.titlebox
+                | 标题：
+                input.title(type='text', name='title' value="")
             script#myEditor(type='text/plain', name='myEditor').
                 <p>欢迎使用UEditor！</p>
+            input(type='hidden', name="action" value='uploadimage')
             input#btn(type='button', value='提交数据')

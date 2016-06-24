@@ -358,6 +358,17 @@ h5, h6          { font-weight: bolder }
 /*    text-align: center;*/
 }
 
+.main .work .contenTitle{
+    color: white;
+    font-family: "仿宋";
+    font-size: 25px;
+    display: inline-block;
+
+}
+.di{
+    margin-top: 200px;
+    line-height: 40px;
+}
 .main .work .blogCaption h1{
     position: relative;
     display: inline-block;
@@ -368,7 +379,7 @@ h5, h6          { font-weight: bolder }
     font-family: "raleway-regular", arial;
     font-size: 16px;
     letter-spacing: .5px;
-    border-bottom: 1px solid #bfbbbb;
+    /*border-bottom: 1px solid #bfbbbb;*/
   /*border-top: 1px solid #bfbbbb;*/
 }
 
@@ -478,11 +489,7 @@ h5, h6          { font-weight: bolder }
 }
 
 .content p{
-    color: #4b4848;
-    font-family: "raleway-regular", arial;
-    font-size: 15px;
-    line-height: 24px;
-    margin-bottom: 60px;
+
 }
 
 .content h1,
@@ -658,4 +665,3 @@ h5, h6          { font-weight: bolder }
         width: 370px;
     }
 }
-

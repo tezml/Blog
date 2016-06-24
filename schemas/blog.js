@@ -4,22 +4,23 @@ var blogScema= new mongoose.Schema({
     title:String,
     outline:String,
     titleImg:String,
-    createTime:String
+    createTime:String,
+    inner:String
 });
 
-blogScema.pre("save",function(){
-    this.createTime=this.createTime=Date.now();
-    //next();
+blogScema.pre("save",function(next){
+    //this.createTime=this.createTime=Date.now();
+    next();
 });
 
 blogScema.statics={
     fetch:function(cb){
         return this
             .find({})
-            .sort("createTime")
+            //.sort("createTime")
             .exec(cb)
     },
-    findById:function(cb){
+    findById:function(id,cb){
         return this
             .findOne({_id:id})
             .exec(cb)
@@ -27,4 +28,4 @@ blogScema.statics={
 }
 
 //导出模式
-module.export=blogScema;
+module.exports=blogScema;

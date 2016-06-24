@@ -2,9 +2,14 @@ var port =process.env.PORT || 3000;
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var multer = require('multer');
 var mongoose=require('mongoose');
 var app =express();
-var blog=require("./models/blog");
+var Blog=require("./models/blog.js");
+var _=require('underscore');
+
+mongoose.connect("mongodb://localhost/tezml");
+
 app.set('views','./jade/pages');//视图
 app.set('view engine', 'jade');//模板引擎
 app.use(express.static(path.join(__dirname, 'public')));
@@ -17,6 +22,11 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json());
 
+
+
+
+
+
 app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
 // ueditor 客户发起上传图片请求
     if(req.query.action === 'uploadimage'){
@@ -24,12 +34,12 @@ app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, re
         var date = new Date();
         var imgname = req.ueditor.filename;
 
-        var img_url = '/images/ueditor/';
+        var img_url = '/imageData/ueditor/';
         res.ue_up(img_url); //你只要输入要保存的地址 。保存操作交给ueditor来做
     }
 //  客户端发起图片列表请求
     else if (req.query.action === 'listimage'){
-        var dir_url = '/images/ueditor/';
+        var dir_url = '/imageData/ueditor/';
         res.ue_list(dir_url);  // 客户端会列出 dir_url 目录下的所有图片
     }
 // 客户端发起其它请求
@@ -42,7 +52,62 @@ app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, re
 console.log('端口号：'+port+'已启动');
 
 
-mongoose.connect("mongodb:localhost/blog");
+
+app.post('/blog/content/',function(req,res){
+    var id=req.body._id;
+
+    Blog.findById(id,function(err,blog){
+        console.log(blog);
+        if(err){
+            console.log(err)
+        }
+        var json={inner:blog.inner};
+        res.send(JSON.stringify(json));
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.write(blog.inner);
+        res.end();
+    });
+});
+
+//添加文章
+app.post('/blog/add/',function(req,res){
+
+    //var id=req.body.id;
+    var blogObj=req.body.blog;
+    var _blog;
+   /* if(id !="undefined"){
+        Blog.findById(id,function(err,blog){
+            if(err){
+                console.log(err)
+            }
+            _blog= _.extend(blog,blogObj);
+            _blog.save=(function(err,blog){
+                if(err){
+                    console.log(err)
+                }
+                res.redirect('/inner/' + blog._id)
+            })
+        })
+    }else{*/
+        _blog= new Blog({
+            //id:blogObj.id,
+            title:blogObj.title,
+            outline:blogObj.outline,
+            titleImg:blogObj.titleImg,
+            createTime:blogObj.createTime,
+            inner:blogObj.inner
+        });
+        _blog.save(function(err,blog){
+            if(err){
+                console.log(err)
+            }
+            console.log(blog);
+            res.redirect('/inner/'+blog._id)
+        });
+    //}
+});
+
+
 
 
 //路由
@@ -53,15 +118,15 @@ app.get('/',function(req,res){
    })
 });
 app.get('/blog/',function(req,res){
-    blog.fetch(function(err,blog){
-       if(err){
-           console.log(err);
-       }
+    Blog.fetch(function(err,blog){
+        if(err){
+            console.log(err)
+        }
+        res.render("blog",{
+            classSeleced:"blog",
+            blogs:blog
+        })
     });
-    res.render("blog",{
-        classSeleced:"blog",
-        blog:blog
-    })
 });
 app.get('/gallery/',function(req,res){
     res.render("gallery",{
@@ -87,7 +152,11 @@ app.get('/contact/',function(req,res){
 });
 app.get('/inner/:id',function(req,res){
     var id=req.params.id;
-    blog.findById(id,function(err,blog){
+    Blog.findById(id,function(err,blog){
+        console.log(blog);
+        if(err){
+            console.log(err)
+        }
         res.render("inner",{
             classSeleced:"Tezml",
             data:blog
@@ -97,6 +166,9 @@ app.get('/inner/:id',function(req,res){
 app.get('/photo/:id',function(req,res){
     var id=req.params.id;
     blog.findById(id,function(err,blog){
+        if(err){
+            console.log(err)
+        }
         res.render("photo",{
             classSeleced:"Tezml",
             data:blog
@@ -105,7 +177,14 @@ app.get('/photo/:id',function(req,res){
 
 
 });
-app.get('/create/',function(req,res){
+app.get('/createImg/',function(req,res){
+    res.render("createImg",{
+
+    })
+});
+
+
+app.get('/createBlog/',function(req,res){
     res.render("createBlog",{
 
     })

@@ -1,14 +1,14 @@
 extends ../layout
 block content
         section.main.clearfix
-            each  item in blog
+            each  item in blogs
                 .work
-                    a(href='inner/#{item.id}')
+                    a(href='inner/#{item._id}' target='_blank')
                         .blogCaption
                             img.sevenB(src='#{item.titleImg}', alt='#{item.title}' title="#{item.title}")
                             .work_title
                                 h3.post-item-title
-                                    a(href='inner/#{item.id}') #{item.title}
+                                    a(href='inner/#{item._id}') #{item.title}
                                 .post-item-inner
                                     .post-meta
                                         span.user

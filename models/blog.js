@@ -1,6 +1,6 @@
 var mongoose=require('mongoose');
 var blogScema=require('../schemas/blog');
-var blog= mongoose.model('blog',blogScema);
+var Blog= mongoose.model('Blog',blogScema);
 
-module.exports=blog
+module.exports=Blog;
 

@@ -6,33 +6,15 @@ block content
                     .work_nav
                         ul.btn.clearfix
                             li
-                                a.previous(href='inner/#{data.id}', data-title='Previous')
+                                a.previous(href='inner/#{data._id}', data-title='Previous')
                             li
                                 a.grid(href='/blog', data-title='Portfolio')
                             li
-                                a.next(href='inner/#{data.id}', data-title='Next')
+                                a.next(href='inner/#{data._id}', data-title='Next')
                     // end work_nav
                     h1.title #{data.title}
             // end top
             section.wrapper
-                .content
-                    p
-                        | Nunc pellentesque mauris ut magna pulvinar, quis fermentum tellus pulvinar. Curabitur ut fermentum quam. Nam tincidunt sagittis neque in elementum. Fusce convallis cursus porta. Curabitur dapibus pretium leo, at laoreet magna ullamcorper ac. Integer quam nulla, fringilla ac imperdiet at, consequat vel leo. Quisque non semper justo, eu aliquam velit. Pellentesque rhoncus, quam ac fringilla euismod, ligula diam congue orci, id cursus dui velit quis ligula.
-                    h2 Nulla nec pellentesque tempus, ipsum arcu aliquam tortor.
-                    p
-                        | vel tempus libero diam vel arcu. Etiam id tincidunt tortor. Nam auctor consequat quam, vel mattis dui laoreet a. Nunc condimentum iaculis tortor, id eleifend nulla mattis lobortis. Pellentesque semper blandit odio, id tempor lorem imperdiet eu. Ut sagittis sagittis consectetur ,Maecenas eget risus eros. Nunc venenatis ante a rutrum cursus.
-                    h2 Quisque non semper justo
-                    p
-                        | Commodo at blandit vitae, placerat in sem. Morbi ornare nec felis in euismod. Suspendisse vulputate orci ultrices enim facilisis, vel lobortis magna rhoncus. Integer mattis at elit vitae adipiscing. Cras imperdiet cursus nunc quis ullamcorper.
-                    p
-                        | vel tempus libero diam vel arcu. Etiam id tincidunt tortor. Nam auctor consequat quam, vel mattis dui laoreet a. Nunc condimentum iaculis tortor, id eleifend nulla mattis lobortis. Pellentesque semper blandit odio, id tempor lorem imperdiet eu. Ut sagittis sagittis consectetur ,Maecenas eget risus eros. Nunc venenatis ante a rutrum cursus.
-                    p
-                        | Commodo at blandit vitae, placerat in sem. Morbi ornare nec felis in euismod. Suspendisse vulputate orci ultrices enim facilisis, vel lobortis magna rhoncus. Integer mattis at elit vitae adipiscing. Cras imperdiet cursus nunc quis ullamcorper.
-                    h1 H1 : Quisque non semper justo
-                    h2 H2 : Quisque non semper justo
-                    h3 H3 : Quisque non semper justo
-                    h4 H4 : Quisque non semper justo
-                    h5 H5 : Quisque non semper justo
-                    h6 H6 : Quisque non semper justo
-                // end content
-        // end main
+                div.content(sid="#{data._id}")
+
+            script(type='text/javascript', src='/js/inner.js')
