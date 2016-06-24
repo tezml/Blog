@@ -130,9 +130,65 @@ form .title{
     display: inline;
 }
 
+.info_cover{
+    margin-top: 20px;
+}
+.info_cover .tit{
+    float: left;
+    display: inline-block;
+    margin-top: 44px;
+}
+.info_cover .cover_box{
+    width: 74px;
+    height: 100px;
+    background: #cccccc;
+    display: inline-block;
+    top: 12px;
+}
+.info_cover .cover_box_single{
+    width: 220px;
+    height: 280px;
+    background: #cccccc;
+    display: inline-block;
+    top: 12px;
+}
+.info_cover img {
+    width: 74px;
+    height: 100px;
+    margin-top: -23px;
+}
+.info_cover span{
+    width: 74px;
+    height: 23px;
+    color: #FFFFFF;
+    background: #000000;
+    position: relative;
+    bottom: -77px;
+    float: left;
+    text-align: center;
+    line-height: 23px;
+    opacity: 0.66;
+    cursor: pointer;
+}
 
-
-
+.info_cover #cover_single{
+    background: #000000;
+    bottom: -239px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    height: 41px;
+    line-height: 41px;
+    opacity: 0.66;
+    position: relative;
+    text-align: center;
+    width: 220px;
+}
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
 
 
 

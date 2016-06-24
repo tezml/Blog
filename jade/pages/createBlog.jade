@@ -4,13 +4,19 @@ html
         title tezml--后台创建博客页
         meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
         link(rel='stylesheet', type='text/css', href='/css/global.css')
+        link(rel='stylesheet', type='text/css', href='/css/style.css')
         script(type='text/javascript', src='/js/jquery.js')
         script(type='text/javascript', src='/js/main.js')
         script(type='text/javascript', src='/js/tezml.js')
+        script(type='text/javascript', src='/js/webuploader.js')
         script(type='text/javascript', charset='utf-8', src='/ueditor/ueditor.config.js')
         script(type='text/javascript', charset='utf-8', src='/ueditor/_examples/editor_api.js')
         script(type='text/javascript', charset='utf-8', src='/js/edu.js')
     body
+        .info_cover
+            p.tit  作品封面：
+            .cover_box
+                span#cover_upload 上传封面
         form#form(method='post', target='_blank')
             div.titlebox
                 | 标题：

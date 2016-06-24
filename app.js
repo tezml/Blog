@@ -17,16 +17,18 @@ app.listen(port);
 
 var bodyParser = require('body-parser');
 var ueditor = require("ueditor");
+var jqupload = require("jquery-file-upload-middleware");
+
 app.use(bodyParser.urlencoded({
     extended: true
-}))
+}));
 app.use(bodyParser.json());
+console.log('端口号：'+port+'已启动');
 
 
 
 
-
-
+//添加文章
 app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
 // ueditor 客户发起上传图片请求
     if(req.query.action === 'uploadimage'){
@@ -48,8 +50,31 @@ app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, re
         res.redirect('/ueditor/ueditor.config.json')
     }}));
 
-
-console.log('端口号：'+port+'已启动');
+app.use("/upload/",function(req,res,next){
+    var uploadType=req.body.uploadType;
+    var galleryType=req.body.galleryType;
+    console.log(req.body);
+    console.log(req.params);
+    console.log(req.query);
+    jqupload.fileHandler({
+        uploadDir:function(){
+            console.log(uploadType);
+            if(req.body.uploadType=="titleImg"){
+                return __dirname+'/public/imageData/titleImg/';
+            }else if(req.body.uploadType=="photo"){
+                return __dirname+'/public/imageData/photo/'+galleryType;
+            }
+        },
+        uploadUrl:function(){
+            console.log(uploadType);
+            if(req.body.uploadType=="titleImg"){
+                return '/imageData/titleImg/';
+            }else if(req.body.uploadType=="photo"){
+                return '/imageData/photo/'+req.body.galleryType;
+            }
+        }
+    })(req,res,next)
+});
 
 
 

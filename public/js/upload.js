@@ -144,6 +144,8 @@
                 label: '点击选择图片'
             },
             formData: {
+                uploadType:"photo",
+                galleryType:""
             },
             dnd: '#dndArea',
             paste: '#uploader',

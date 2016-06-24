@@ -5,6 +5,36 @@ $(function(){
     },1000);
     var form=$('#form')[0];
     form.action="/ueditor/ue/";
+
+    var upload_cover = WebUploader.create({
+        auto: true,
+        chunked: false,
+        pick: '#cover_upload',
+        server: '/upload/',
+        swf: '/js/Uploader.swf',
+        compress:false,
+        accept: {
+            title: 'Images',
+            extensions: 'JPEG,jpg,png',
+            mimeTypes: 'image'
+        },
+        fileSingleSizeLimit: 1 * 1024 * 1024,    // 1 M
+        formData: {
+            uploadType:"titleImg"
+        }
+    });
+    upload_cover.on('uploadSuccess', function (file, res) {
+        var raw = res.files[0].url;
+        $(".cover_img").remove();
+        var img = $(new Image()).attr('src', raw).attr('class', 'cover_img');
+        $(".cover_box").append(img);
+    });
+
+
+
+
+
+
     $('#btn').click(function(){
         //手动提交需要手动同步编辑器数据
         ue.sync();
@@ -27,7 +57,7 @@ $(function(){
             type: 'post',
             dataType: 'json',
             success:function(){
-
+                alert("提交成功")
             }
         })
 
