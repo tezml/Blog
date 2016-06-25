@@ -5,6 +5,7 @@ html(lang='en')
         title tezml--上传图片
         link(rel='stylesheet', type='text/css', href='/css/webuploader.css')
         link(rel='stylesheet', type='text/css', href='/css/style.css')
+        link(rel='stylesheet', type='text/css', href='/css/global.css')
     body
         #wrapper
             #container
@@ -22,6 +23,17 @@ html(lang='en')
                         .btns
                             #filePicker2
                             .uploadBtn 开始上传
+        ul.tagBox
+            each  item in photos
+                li.tag #{item.type}
+            li.addtag
+                input.textIpt(type='text')
+                input.addIpt(type='button', value='添加类型')
+        input.pu(type='button', value='同步到前台')
+        .info_cover
+            p.tit  作品封面：
+            .cover_box
+                span#cover_upload 上传封面
         script(type='text/javascript', src='/js/jquery.js')
         script(type='text/javascript', src='/js/webuploader.js')
         script(type='text/javascript', src='/js/upload.js')

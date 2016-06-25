@@ -1,6 +1,8 @@
 (function( $ ){
     // 当domReady的时候开始初始化
+    var arrImg=[];
     $(function() {
+
         var $wrap = $('#uploader'),
 
             // 图片容器
@@ -144,15 +146,13 @@
                 label: '点击选择图片'
             },
             formData: {
-                uploadType:"photo",
-                galleryType:""
             },
             dnd: '#dndArea',
             paste: '#uploader',
             swf: '/js/Uploader.swf',
             chunked: false,
             chunkSize: 512 * 1024,
-            server: '/upload/',
+            server: '/upload/Photo/',
             // runtimeOrder: 'flash',
 
             // accept: {
@@ -167,6 +167,13 @@
             fileSizeLimit: 200 * 1024 * 1024,    // 200 M
             fileSingleSizeLimit: 50 * 1024 * 1024    // 50 M
         });
+
+        uploader.on('uploadSuccess', function (file, res) {
+            arrImg.push(res.files[0].url);
+            console.log(arrImg);
+        });
+
+
 
         // 拖拽时不接受 js, txt 文件。
         uploader.on( 'dndAccept', function( items ) {
@@ -471,7 +478,7 @@
                 case 'finish':
                     stats = uploader.getStats();
                     if ( stats.successNum ) {
-                        alert( '上传成功' );
+                        //alert( '上传成功' );
                     } else {
                         // 没有成功的图片，重设
                         state = 'done';
@@ -567,4 +574,108 @@
         updateTotalProgress();
     });
 
-})( jQuery );
+    //类型点击事件并且绑定循环
+    bindTag();
+    function bindTag() {
+        $(".tag").on("click", function () {
+            $(".tag").removeClass("active");
+            $(this).addClass("active");
+            $.ajax({
+                url: '/photo/info/',
+                data: {
+                    type:$(this).html()
+                },
+                type: 'post',
+                dataType: 'json',
+                success:function(res){
+                    $(".cover_img").remove();
+                    var img = $(new Image()).attr('src', res.titleImg).attr('class', 'cover_img');
+                    $(".cover_box").append(img);
+                }
+            })
+        });
+    };
+    //添加类型
+    $(".addIpt").on("click",function(){
+        $.ajax({
+            url: '/photo/addType/',
+            data: {
+                type:String($(".textIpt").val())
+            },
+            type: 'post',
+            dataType: 'json',
+            success:function(res){
+                $(".addtag").before('<li class="tag">'+$(".textIpt").val()+'</li>');
+                $(".tag").unbind();
+                bindTag();
+                $(".textIpt").val("");
+            }
+        })
+    });
+
+
+    //提交到前台
+    $(".pu").on("click",function(){
+        var type=$(".tagBox .active").html();
+        if(type){
+        var titleImg=$(".cover_img").attr("src");
+        $.ajax({
+            url: '/photo/addPhoto/',
+            data: {
+                type:type,
+                img:arrImg,
+                titleImg:titleImg
+            },
+            type: 'post',
+            dataType: 'json',
+            success:function(res){
+
+            }
+        })
+        }else{
+            alert("请选择类型再传");
+            return false
+        }
+    });
+
+    //上传封面
+    var upload_cover = WebUploader.create({
+        auto: true,
+        chunked: false,
+        pick: '#cover_upload',
+        server: '/upload/blogTitleImg/',
+        swf: '/js/Uploader.swf',
+        compress:false,
+        accept: {
+            title: 'Images',
+            extensions: 'JPEG,jpg,png',
+            mimeTypes: 'image'
+        },
+        fileSingleSizeLimit: 1 * 1024 * 1024,    // 1 M
+        formData: {
+        }
+    });
+    upload_cover.on('uploadSuccess', function (file, res) {
+        var raw = res.files[0].url;
+        $(".cover_img").remove();
+        var img = $(new Image()).attr('src', raw).attr('class', 'cover_img');
+        $(".cover_box").append(img);
+    });
+
+
+})( jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

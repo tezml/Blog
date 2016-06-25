@@ -3,8 +3,8 @@ block content
         section.main.clearfix
             each item in gallery
                 .work
-                    a(href='photo/#{item.id}')
+                    a(href='photo/#{item.type}' target='_blank')
                         img.media(src='#{item.titleImg}', alt='#{item.titleImg}')
                         .GalleryCaption
                             .work_title
-                                h1 #{item.title}
+                                h1 #{item.type}

@@ -1,11 +1,17 @@
 extends ../layout
 block content
+        link(rel='stylesheet', type='text/css', href='/css/component.css')
+        link(rel='stylesheet', type='text/css', href='/css/default.css')
+        script(type='text/javascript', src='/js/modernizr.custom.js')
+        section#box.main
+            ul#grid.grid.clearfix.effect-8
+                    each  item in data.img
+                        li.item
+                            img(src='#{item}')
+
+
+        script(type='text/javascript', src='/js/masonry.pkgd.min.js')
+        script(type='text/javascript', src='/js/imagesloaded.js')
+        script(type='text/javascript', src='/js/classie.js')
+        script(type='text/javascript', src='/js/AnimOnScroll.js')
         script(type='text/javascript', src='/js/photo.js')
-        section#box.main.clearfix
-                ul.waterFlow
-                ul.waterFlow
-                ul.waterFlow
-                ul.waterFlow
-                ul.waterFlow
-                ul.waterFlow
-                ul.waterFlow

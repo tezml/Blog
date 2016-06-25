@@ -10,7 +10,7 @@ $(function(){
         auto: true,
         chunked: false,
         pick: '#cover_upload',
-        server: '/upload/',
+        server: '/upload/blogTitleImg/',
         swf: '/js/Uploader.swf',
         compress:false,
         accept: {
@@ -20,7 +20,6 @@ $(function(){
         },
         fileSingleSizeLimit: 1 * 1024 * 1024,    // 1 M
         formData: {
-            uploadType:"titleImg"
         }
     });
     upload_cover.on('uploadSuccess', function (file, res) {
@@ -40,11 +39,12 @@ $(function(){
         ue.sync();
         var title=$(".title").val();
         var outline=ue.getContentTxt().substring(0,50);
+        var titleImg=$(".cover_img").attr("src")
         var blog={
             //id:"1",
             title:title,
             outline:outline,
-            titleImg:"/img/e.jpg",
+            titleImg:titleImg,
             createTime:tools.getLocalTime(tools.getTimestamp()),
             inner:ue.getContent()
         };

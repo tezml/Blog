@@ -6,6 +6,7 @@ var multer = require('multer');
 var mongoose=require('mongoose');
 var app =express();
 var Blog=require("./models/blog.js");
+var Photo=require("./models/photo.js");
 var _=require('underscore');
 
 mongoose.connect("mongodb://localhost/tezml");
@@ -49,35 +50,31 @@ app.use("/ueditor/ue/", ueditor(path.join(__dirname, 'public'), function(req, re
         res.setHeader('Content-Type', 'application/json');
         res.redirect('/ueditor/ueditor.config.json')
     }}));
-
-app.use("/upload/",function(req,res,next){
-    var uploadType=req.body.uploadType;
-    var galleryType=req.body.galleryType;
-    console.log(req.body);
-    console.log(req.params);
-    console.log(req.query);
+//博客表头图片上传
+app.use("/upload/blogTitleImg",function(req,res,next){
     jqupload.fileHandler({
         uploadDir:function(){
-            console.log(uploadType);
-            if(req.body.uploadType=="titleImg"){
-                return __dirname+'/public/imageData/titleImg/';
-            }else if(req.body.uploadType=="photo"){
-                return __dirname+'/public/imageData/photo/'+galleryType;
-            }
+            return __dirname+'/public/imageData/blogTitleImg/';
         },
         uploadUrl:function(){
-            console.log(uploadType);
-            if(req.body.uploadType=="titleImg"){
-                return '/imageData/titleImg/';
-            }else if(req.body.uploadType=="photo"){
-                return '/imageData/photo/'+req.body.galleryType;
-            }
+            return '/imageData/blogTitleImg/';
+        }
+    })(req,res,next)
+});
+//图片上传
+app.use("/upload/Photo",function(req,res,next){
+    jqupload.fileHandler({
+        uploadDir: function () {
+            return __dirname + '/public/imageData/photo/';
+
+        },
+        uploadUrl: function () {
+            return '/imageData/photo/';
         }
     })(req,res,next)
 });
 
-
-
+//博客内容
 app.post('/blog/content/',function(req,res){
     var id=req.body._id;
 
@@ -127,13 +124,66 @@ app.post('/blog/add/',function(req,res){
                 console.log(err)
             }
             console.log(blog);
-            res.redirect('/inner/'+blog._id)
+            var json={blog:blog};
+            res.send(JSON.stringify(json));
+            res.end();
         });
     //}
 });
+//添加类
+app.post('/photo/addType/',function(req,res){
+    var photoObj=req.body;
+    var _photo;
+    _photo= new Photo({
+        type:photoObj.type,
+        img:[],
+        titleImg:""
+    });
+    _photo.save(function(err,photo){
+        if(err){
+            console.log(err)
+        }
+        var json={type:photo.type};
+        res.send(JSON.stringify(json));
+        res.end();
+    });
+});
+//提交给前台
+app.post('/photo/addPhoto/',function(req,res){
+    var photoObj=req.body;
+    var type=photoObj.type;
+    var _photo;
+    Photo.findById(type,function(err,data){
+        for (var i = 0; i < photoObj.img.length; i++) {
+            data.img.push(photoObj.img[i])
+        }
+        data.titleImg=photoObj.titleImg;
+        _photo= new Photo(data);
+        /*res.send(JSON.stringify(data));
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.end();*/
+        _photo.save(function(err,photo){
+            if(err){
+                console.log(err)
+            }
+            res.send(JSON.stringify(photo));
+            res.end();
+        });
+    });
 
 
 
+});
+//查询每个图片类型对应的所有信息
+app.post('/photo/info/',function(req,res) {
+    var photoObj=req.body;
+    var type=photoObj.type;
+    Photo.findById(type,function(err,data){
+        res.send(JSON.stringify(data));
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.end();
+    });
+});
 
 //路由
 
@@ -154,15 +204,14 @@ app.get('/blog/',function(req,res){
     });
 });
 app.get('/gallery/',function(req,res){
-    res.render("gallery",{
-        classSeleced:"gallery",
-        gallery:[
-            {id:"1",titleImg:"/img/work1.jpg",title:"代码"},
-            {id:"2",titleImg:"/img/work2.jpg",title:"足球"},
-            {id:"3",titleImg:"/img/work3.jpg",title:"热爱"},
-            {id:"4",titleImg:"/img/work4.jpg",title:"梦想"},
-            {id:"5",titleImg:"/img/work5.jpg",title:"其他"}
-        ]
+    Photo.fetch(function(err,data) {
+        if (err) {
+            console.log(err)
+        }
+        res.render("gallery", {
+            classSeleced: "gallery",
+            gallery: data
+        })
     })
 });
 app.get('/board/',function(req,res){
@@ -188,24 +237,30 @@ app.get('/inner/:id',function(req,res){
         })
     });
 });
-app.get('/photo/:id',function(req,res){
-    var id=req.params.id;
-    blog.findById(id,function(err,blog){
+app.get('/photo/:type',function(req,res){
+    var type=req.params.type;
+    Photo.findById(type,function(err,data){
         if(err){
             console.log(err)
         }
+        console.log(data)
         res.render("photo",{
             classSeleced:"Tezml",
-            data:blog
+            data:data
         })
     });
 
 
 });
 app.get('/createImg/',function(req,res){
-    res.render("createImg",{
-
-    })
+    Photo.fetch(function(err,type){
+        if(err){
+            console.log(err)
+        }
+        res.render("createImg",{
+            photos:type
+        })
+    });
 });
 
 

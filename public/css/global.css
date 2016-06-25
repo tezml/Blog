@@ -191,7 +191,37 @@ form .title{
 }
 
 
+.tagBox{
+    border: 1px solid #cccccc;
+    height: 100px;
+    width: 1200px;
+}
 
+.tagBox .tag{
+    width: 100px;
+    border: 3px solid #0000EE;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    cursor: pointer;
+}
 
-
-
+.tagBox .addtag{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+.tagBox .active{
+    border: 3px solid #f43838;
+}
+.pu{
+    float: right;
+    margin-top: -60px;
+    margin-right: 100px;
+}
+#box .item{
+    border: 5px solid #399;
+}
