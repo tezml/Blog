@@ -5,6 +5,4 @@ $(function(){
         viewportFactor : 0.2
     } );
 
-
-
 });

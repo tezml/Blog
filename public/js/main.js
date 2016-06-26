@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-
-
     //mobile menu toggling
     $("#menu_icon").click(function(){
         $("header nav ul").toggleClass("show_menu");
@@ -27,10 +25,6 @@ $(document).ready(function(){
             "margin-left" : hw
         });
     }
-
-   
-
-
 
     //Tooltip
     $("a").mouseover(function(){
@@ -70,6 +64,16 @@ $(document).ready(function(){
         var tooltip = $(".tooltip");       
         tooltip.remove();
     });
+
+    $(".ewm").on("mouseover",function(){
+        $(this).parent().find(".ewm_box").show();
+    })
+
+    $(".ewm").on("mouseout",function(){
+        $(this).parent().find(".ewm_box").hide();
+    })
+
+
 
 
 });

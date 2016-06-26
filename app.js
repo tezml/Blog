@@ -263,15 +263,28 @@ app.get('/createImg/',function(req,res){
     });
 });
 
-
 app.get('/createBlog/',function(req,res){
     res.render("createBlog",{
-
     })
 });
 
-
-
+//获取四个contect里的jade
+app.get('/welcome/',function(req,res){
+    res.render("welcome",{
+    })
+});
+app.get('/AboutMe/',function(req,res){
+    res.render("AboutMe",{
+    })
+});
+app.get('/AboutWebsite/',function(req,res){
+    res.render("AboutWebsite",{
+    })
+});
+app.get('/ContactMe/',function(req,res){
+    res.render("ContactMe",{
+    })
+});
 
 
 

@@ -11,7 +11,7 @@ $(function(){
         chunked: false,
         pick: '#cover_upload',
         server: '/upload/blogTitleImg/',
-        swf: '/js/Uploader.swf',
+        swf: '/js/lib/Uploader.swf',
         compress:false,
         accept: {
             title: 'Images',
@@ -39,7 +39,7 @@ $(function(){
         ue.sync();
         var title=$(".title").val();
         var outline=ue.getContentTxt().substring(0,50);
-        var titleImg=$(".cover_img").attr("src")
+        var titleImg=$(".cover_img").attr("src");
         var blog={
             //id:"1",
             title:title,

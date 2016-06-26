@@ -1,52 +1,42 @@
 extends ../layout
 block content
-        section.main.clearfix
-            .work
-                .blogCaption(style='background: #339999')
-                    .work_title
-                        span.di
-                            h2.contenTitle Tezml博客小站1.0版本历经不到一个月，终于上线啦。目前来看，应用还比较简单，我们会在2.0版本开放留言板功能以及注册登陆功能以及更多有趣的应用，我们始终相信，离开WordPress的博客站，可以生而不同。
-            .work
-                img.media(src='/img/work1.jpg', style='width: 99.9%', alt='')
-            .work
-                .blogCaption(style='background: #339933')
-                    .work_title
-                        span.di
-                            h2.contenTitle 大家好，我是Tezml博客小站的站长，恩，就长这个蠢样。正式介绍一下，我是一个前端码畜，呸！什么码畜。。前端工程师！芳龄不到30，喜欢足球，喜欢打游戏，至于代码嘛...兴致来了，就敲一宿代码也停不下来。
-            .work
-                .blogCaption(style='background: #666699')
-                    .work_title
-                        span.di
-                            h2.contenTitle Tezml博客小站，是传统博客的升级和革新。如你所见，这绝不是想象中的WordPress之作，其开发从设计到前端html、css、js再到后端的nodejs，以及数据库mongodb。都是我一个人搞的，当然本人目前对于NodeJs还处于研究状态，相信不久的将来本站还会推出2.0,3.0甚至更多的版本。
-            .work
-                .blogCaption(style='background: #996699')
-                    .work_title
-                        span.di
-                            h2.contenTitle 欢迎大家来各大平台来骚扰我 O(∩_∩)O~
-                            h2.contenTitle GitHub：
-                                a(href='https://github.com/tezml') https://github.com/tezml
-                            br
-                            h2.contenTitle twitter：
-                                a(href='https://twitter.com/tezml1') https://twitter.com/tezml1
-                            br
-                            h2.contenTitle faceBook：
-                                a(href='https://www.facebook.com/tezml.gir') https://www.facebook.com/tezml.gir
-                            br
-                            h2.contenTitle 邮箱：tezml@tezml.com
-                            br
-                            h2.contenTitle QQ：826269846
-            .work
-                .blogCaption(style='background: #336699')
-                    .work_title
-                        span.di
-                            h2.contenTitle 这就是你所看到的全部。
-                            br
-                            h2.contenTitle 但并不是未来的全部。
-                            br
-                            h2.contenTitle                  --------Tezml
-        // end main
-    script.
-        $(window).resize(function() {
-            $(".blogCaption").height($(".blogCaption").width())
-        })
-        $(".blogCaption").height($(".blogCaption").width())
+    link(rel='stylesheet', type='text/css', href='http://fonts.useso.com/css?family=Vollkorn|Open+Sans:400,700')
+    link(rel='stylesheet', type='text/css', href='/css/reset-contect.css')
+    link(rel='stylesheet', type='text/css', href='/css/default-contect.css')
+    link(rel='stylesheet', type='text/css', href='/css/style-contect.css')
+    script(type='text/javascript', src='/js/lib/modernizr.js')
+    section.main.clearfix
+        main.cd-main
+            ul.cd-gallery
+                li.cd-item
+                    a(href='/welcome/')
+                        div
+                            h2 Welcome to Tezml
+                            b View More
+                li.cd-item
+                    a(href='/AboutMe/')
+                        div
+                            h2 About Me
+                            b View More
+                li.cd-item
+                    a.dark-text(href='/AboutWebsite/')
+                        div
+                            h2 About Website
+                            b View More
+                li.cd-item
+                    a(href='/ContactMe/')
+                        div
+                            h2 Contact Me
+                            b View More
+            // .cd-gallery
+            // .cd-main
+        .cd-folding-panel
+            .fold-left
+            // this is the left fold
+            .fold-right
+            // this is the right fold
+            .cd-fold-content
+                // content will be loaded using javascript
+            a.cd-close(href='#0')
+
+    script(type='text/javascript', src='/js/lib/main.js')

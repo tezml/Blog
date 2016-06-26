@@ -225,3 +225,21 @@ form .title{
 #box .item{
     border: 5px solid #399;
 }
+
+.ewm_box{
+    width: 210px;
+    height: 210px;
+    left: -85px;
+    position: absolute;
+    top: -236px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
