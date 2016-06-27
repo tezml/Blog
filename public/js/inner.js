@@ -11,4 +11,7 @@ $(function(){
             $(".content").append(res.inner);
         }
     })
+
+
+    $('#drag').drag();
 });

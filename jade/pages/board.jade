@@ -1,5 +1,14 @@
 extends ../layout
 block content
-        section.main.clearfix
-            h1(style='font-size:50px;') 敬请期待...
-        // end main
+        form#form_board(action='/')
+            .img_box
+                .head_photo
+            input.nickName(name='nickName',  placeholder='输入你的昵称', aria-required='true')
+            textarea#comment(name='comment', placeholder='有什么想说的？尽情说吧', maxlength='500', aria-required='true')
+            input.submit(type='button', value='添加留言')
+        section.main.clearfix.marginTop
+            ul#grid.grid.clearfix.effect-8.gallery
+
+                    li.item
+                        a(href="#{item}")
+                            img(src='#{item}')

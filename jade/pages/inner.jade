@@ -1,6 +1,8 @@
 extends ../layout
 block content
-        section.main.clearfix
+        link(rel='stylesheet', type='text/css', href='/css/drag.css')
+        script(type='text/javascript', src='/js/lib/drag.js')
+        section.main.clearfix.mi
             section.top
                 .wrapper.content_header.clearfix
                     .work_nav
@@ -16,5 +18,33 @@ block content
             // end top
             section.wrapper
                 div.content(sid="#{data._id}")
-
+                .talk_box
+                    .title_box
+                        div.lz
+                        img(src='/img/tezmlB.PNG')
+                        h1 1楼
+                        h3.nickName admin
+                        p.time 2016/6/23 下午2:53
+                    .message.clearfix
+                        | 你们呀你们，navie！图样图森破。你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破
+                .talk_box
+                    .title_box
+                        div.nolz
+                        img(src='/img/tezmlB.PNG')
+                        h3.nickName admin
+                        p.time 2016/6/23 下午2:53
+                    .message.clearfix
+                        | 你们呀你们，navie！图样图森破。你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破
+                form#form_reply(action='/')
+                    h4  发表评论
+                    label(for='nikeName')
+                        | 昵称
+                        span.required *
+                    input#nikeName(name='nikeName', type='text', value='', placeholder='请输入你的昵称', size='30', aria-required='true')
+                    label(for='web') 站点
+                    input#web(name='web', type='text', value='', size='30', placeholder='如果你有站点，请写上吧~', aria-required='false')
+                    #drag
+                    p.must *发表评论前，请滑动滚动条解锁
+                    textarea#comment(name='comment', cols='100', rows='10', placeholder='有什么想说的？尽情说吧', maxlength='500', aria-required='true')
+                    input(type='button', value='发表评论')
             script(type='text/javascript', src='/js/inner.js')

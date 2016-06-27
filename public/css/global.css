@@ -236,10 +236,137 @@ form .title{
 }
 
 
-
-
-
-
-
-
-
+.talk_box{
+    width: 100%;
+    border-bottom: 5px solid #399;
+    margin: 50px auto 50px;
+    /*max-width:1000px;*/
+}
+.talk_box .title_box{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    height: 100px;
+}
+.talk_box .title_box img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: -14px 20px;
+}
+.talk_box .title_box .nickName{
+    margin-bottom: 10px;
+}
+.talk_box .title_box .time{
+    line-height: 10px;
+    margin-left: 30px;
+}
+.talk_box .title_box h1{
+    float: right;
+}
+.message{
+    padding: 20px;
+    line-height: 30px;
+}
+.lz{
+    height: 36px;
+    left: 64px;
+    position: relative;
+    top: 22px;
+    width: 36px;
+    background: url("../img/lz.png");
+}
+.nolz{
+    height: 36px;
+    left: 64px;
+    position: relative;
+    top: 22px;
+    width: 36px;
+}
+#form_reply{margin: 10px;}
+#form_reply h4{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+#form_reply input[type=text]{
+    width: 300px;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+#form_reply label{
+    display: block;
+    margin-top: 10px;
+}
+#form_reply textarea{
+    margin: 10px 0;
+    display: block;
+    padding: 20px;
+}
+.required{
+    color: #ff0000;
+}
+.mi{
+    background: #f6f6f6;
+}
+.must{
+    display: inline-block;
+    color: #ff0000;
+    margin: 10px 0;
+}
+.work .tag{
+    border: 5px solid #399;
+    margin: 20px;
+    display: block;
+    width: 100%;
+    height: 480px;
+    background: #ffffff;
+}
+#form_board{
+    background: #f0efee;
+    margin-left: 300px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+#form_board .submit{
+    margin-left: 100px;
+    margin-top: -100px;
+    border: 5px solid #399;
+    background: #399;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+#form_board .img_box{
+    display: inline-block;
+    margin: 25px 100px 25px 25px;
+}
+#form_board .nickName{
+    margin-top: -120px;
+    border: 5px solid #399;
+    background: #399;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px;
+    width: 150px;
+    margin-right: 100px;
+}
+#form_board textarea{
+    border: 5px solid #399;
+    background: #399;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px;
+    width: 600px;
+    height: 29px;
+    margin-bottom: 28px;
+}
+#form_board .head_photo{
+    width: 80px;
+    height: 80px;
+    background: url("../img/tezmlB.PNG");
+    border-radius: 50%;
+}
+.marginTop{
+    margin-top: 135px;
+}
