@@ -336,6 +336,7 @@ form .title{
     background: #399;
     color: #FFFFFF;
     font-size: 20px;
+    cursor: pointer;
 }
 #form_board .img_box{
     display: inline-block;
@@ -348,7 +349,7 @@ form .title{
     color: #FFFFFF;
     font-size: 20px;
     padding: 20px;
-    width: 150px;
+    width: 170px;
     margin-right: 100px;
 }
 #form_board textarea{
@@ -358,14 +359,15 @@ form .title{
     font-size: 20px;
     padding: 20px;
     width: 600px;
-    height: 29px;
+    height: 79px;
     margin-bottom: 28px;
 }
 #form_board .head_photo{
     width: 80px;
     height: 80px;
-    background: url("../img/tezmlB.PNG");
+    /*background: url("../img/s1.PNG");*/
     border-radius: 50%;
+    cursor: pointer;
 }
 .marginTop{
     margin-top: 135px;

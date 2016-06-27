@@ -1,14 +1,26 @@
 extends ../layout
 block content
-        form#form_board(action='/')
+        link(rel='stylesheet', type='text/css', href='/css/component.css')
+        link(rel='stylesheet', type='text/css', href='/css/default.css')
+        link(rel='stylesheet', type='text/css', href='/css/zoom.css')
+        script(type='text/javascript', src='/js/lib/modernizr.custom.js')
+
+        form#form_board(action='')
             .img_box
                 .head_photo
             input.nickName(name='nickName',  placeholder='输入你的昵称', aria-required='true')
             textarea#comment(name='comment', placeholder='有什么想说的？尽情说吧', maxlength='500', aria-required='true')
             input.submit(type='button', value='添加留言')
-        section.main.clearfix.marginTop
+        section#box.main.clearfix.marginTop
             ul#grid.grid.clearfix.effect-8.gallery
-
+                each  item in data
                     li.item
-                        a(href="#{item}")
-                            img(src='#{item}')
+                        .head_photo(style="background:url('#{item.img}')")
+                        h2 #{item.nickName}
+                        p #{item.message}
+        script(type='text/javascript', src='/js/lib/masonry.pkgd.min.js')
+        script(type='text/javascript', src='/js/lib/imagesloaded.js')
+        script(type='text/javascript', src='/js/lib/classie.js')
+        script(type='text/javascript', src='/js/lib/AnimOnScroll.js')
+        script(type='text/javascript', src='/js/lib/zoom.js')
+        script(type='text/javascript', src='/js/board.js')

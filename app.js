@@ -7,6 +7,7 @@ var mongoose=require('mongoose');
 var app =express();
 var Blog=require("./models/blog.js");
 var Photo=require("./models/photo.js");
+var Board=require("./models/board.js");
 var _=require('underscore');
 
 mongoose.connect("mongodb://localhost/tezml");
@@ -185,6 +186,33 @@ app.post('/photo/info/',function(req,res) {
     });
 });
 
+//添加留言接口
+app.post('/board/add/',function(req,res) {
+    var boardObj=req.body;
+    var _board;
+    _board= new Board({
+        message:boardObj.message,
+        nickName:boardObj.nickName,
+        img:boardObj.img
+    });
+    _board.save(function(err,data){
+        if(err){
+            console.log(err)
+        }
+        res.send(JSON.stringify(data));
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.end();
+    });
+});
+
+
+
+
+
+
+
+
+
 //路由
 
 app.get('/',function(req,res){
@@ -215,9 +243,17 @@ app.get('/gallery/',function(req,res){
     })
 });
 app.get('/board/',function(req,res){
-    res.render("board",{
-        classSeleced:"board"
+    Board.fetch(function(err,data) {
+        if (err) {
+            console.log(err)
+        }
+        console.log(data);
+        res.render("board",{
+            classSeleced:"board",
+            data:data
+        })
     })
+
 });
 app.get('/contact/',function(req,res){
     res.render("contact",{
