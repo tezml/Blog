@@ -36,6 +36,15 @@ $(function(){
             alert("请解锁验证");
             return false
         }
+        if($(".reply_box")){
+            console.log("reply");
+            var type="reply"
+        }else{
+            console.log("comment");
+            var type="comment"
+        }
+
+
         $.ajax({
             url: '/comment/add/',
             data: {
@@ -44,7 +53,8 @@ $(function(){
                 time:tools.getLocalTime(tools.getTimestamp()),
                 message:$("#comment").val(),
                 blogId:_id,
-                lou:$(".talk_box").length+1
+                lou:$(".talk_box").length+1,
+                type:type
             },
             type: 'post',
             dataType: 'json',

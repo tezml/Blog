@@ -213,30 +213,56 @@ app.post('/comment/add/',function(req,res) {
     var id=req.body.blogId;
     var commentObj=req.body;
     var _blog;
+    var type=req.body.type;
+
+
     Blog.findById(id,function(err,blog){
         if(err){
             console.log(err)
         }
-        var nBlog=blog;
-        var commentJson={
-            img:commentObj.img,
-            nickName:commentObj.nickName,
-            time:commentObj.time,
-            message:commentObj.message,
-            reply:[],
-            lou:commentObj.lou
+        //如果type是comment，走正常评论，如果是reply，走回复
+        if(type=="comment"){
+            var nBlog=blog;
+            var commentJson={
+                img:commentObj.img,
+                nickName:commentObj.nickName,
+                time:commentObj.time,
+                message:commentObj.message,
+                reply:[],
+                lou:commentObj.lou
+            };
+            nBlog.comment.push(commentJson);
+            _blog= _.extend(blog,nBlog);
+            _blog.save(function(err,blog){
+                if(err){
+                    console.log(err)
+                }
+                res.send(JSON.stringify(blog));
+                res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+                res.end();
+            })
+        }else if(type=="reply"){
+            var lou=req.body.lou;
+            var Sblog=blog;
+            var commentJson={
+                img:commentObj.img,
+                nickName:commentObj.nickName,
+                time:commentObj.time,
+                message:commentObj.message
+            };
+            Sblog.reply[lou].push(commentJson);
+            console.log(Sblog);
+            Sblog.save(function(err,blog){
+                if(err){
+                    console.log(err)
+                }
+                res.send(JSON.stringify(blog));
+                res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+                res.end();
+            })
         }
-        nBlog.comment.push(commentJson);
-        _blog= _.extend(blog,nBlog);
-        _blog.save(function(err,blog){
-            if(err){
-                console.log(err)
-            }
-            res.send(JSON.stringify(blog));
-            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
-            res.end();
-        })
     })
+
 });
 
 
