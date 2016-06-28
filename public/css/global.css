@@ -77,7 +77,7 @@
 }
 .post-meta span {
     color: #888;
-    padding: 0 10px 0 0;
+    padding: 0 50px 0 0;
 }
 .post-meta i.icon {
     display: inline-block;
@@ -91,8 +91,8 @@
 .time .icon, .single-below-header .date {
     background-position: 0 -56px;
 }
-.cats .icon, .single-below-header .tags {
-    background-position: 0 -29px;
+.count .icon, .single-below-header .tags {
+    background-position: 0 -171px;
 }
 .single-below-header .comment, .post-more .comment {
     background-position: 0 -140px;
@@ -222,9 +222,6 @@ form .title{
     margin-top: -60px;
     margin-right: 100px;
 }
-#box .item{
-    border: 5px solid #399;
-}
 
 .ewm_box{
     width: 210px;
@@ -239,7 +236,7 @@ form .title{
 .talk_box{
     width: 100%;
     border-bottom: 5px solid #399;
-    margin: 50px auto 50px;
+    margin: 50px auto 0;
     /*max-width:1000px;*/
 }
 .talk_box .title_box{
@@ -256,13 +253,60 @@ form .title{
 .talk_box .title_box .nickName{
     margin-bottom: 10px;
 }
-.talk_box .title_box .time{
-    line-height: 10px;
+.talk_box .title_box .time_box{
     margin-left: 30px;
+    line-height: 20px;
+}
+
+.talk_box .title_box .time_box .relpy{
+    margin-left: 20px;
+}
+.talk_box .title_box .time_box p{
+    display: inline-block;
 }
 .talk_box .title_box h1{
     float: right;
 }
+
+.talk_box_s{
+    width: 85%;
+    border-bottom: 5px solid #399;
+    margin-left: 15%;
+}
+.talk_box_s .title_box{
+    border-bottom: 1px solid #cccccc;
+}
+.talk_box_s .title_box img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: -14px 20px;
+}
+.talk_box_s .title_box .nickName{
+    margin-bottom: 10px;
+}
+.talk_box_s .title_box .time_box{
+    margin-left: 30px;
+    line-height: 20px;
+}
+.talk_box_s .title_box .time_box p{
+    display: inline-block;
+}
+.talk_box_s .title_box .time_box .relpy{
+    margin-left: 20px;
+}
+.relpy{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 .message{
     padding: 20px;
     line-height: 30px;
@@ -282,10 +326,20 @@ form .title{
     top: 22px;
     width: 36px;
 }
-#form_reply{margin: 10px;}
+#form_reply{margin: 50px;}
 #form_reply h4{
     border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;
+    display: inline-block;
+}
+#form_reply h5{
+    display: inline-block;
+}
+#form_reply .back{
+    cursor: pointer;
+    font-size: 12px;
+    color: #399;
+    margin-left: 20px;
 }
 #form_reply input[type=text]{
     width: 300px;
@@ -362,13 +416,23 @@ form .title{
     height: 79px;
     margin-bottom: 28px;
 }
-#form_board .head_photo{
+.head_photo{
     width: 80px;
     height: 80px;
     /*background: url("../img/s1.PNG");*/
     border-radius: 50%;
     cursor: pointer;
+    float: left;
 }
 .marginTop{
     margin-top: 135px;
+}
+.board_ul h2{
+    margin: 27px;
+    display: inline-block;
+}
+.board_ul p{
+    border-top: 1px solid #cccccc;
+    margin-top: 20px;
+    padding: 20px;
 }

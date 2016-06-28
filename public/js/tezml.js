@@ -16,6 +16,9 @@ $(function() {
         };
         this.getLocalTime=function(nS) {
             return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+        };
+        this.rnd=function(n,m){
+            return parseInt(n+Math.random()*(m-n));
         }
     }
 

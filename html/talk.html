@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <title>测试留言板</title>
     <style>
-        #form_board{
-
+        .talk_box{
+            width: 100%;
+            border-bottom: 5px solid #399;
+            margin: 50px auto 0;
+            /*max-width:1000px;*/
         }
-        #form_board textarea{
-            border: 5px solid #399
+        .talk_box .title_box{
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 10px;
+            height: 100px;
         }
-        #form_board .head_photo{
+        .talk_box .title_box img{
             width: 80px;
             height: 80px;
-            background: url("../public/img/tezmlB.PNG");
-            border-radius: 50%;
+            float: left;
+            margin: -14px 20px;
+        }
+        .talk_box .title_box .nickName{
+            margin-bottom: 10px;
+        }
+        .talk_box .title_box .time{
+            line-height: 10px;
+            margin-left: 30px;
+        }
+        .talk_box .title_box h1{
+            float: right;
         }
     </style>
 </head>
 <body>
-    <form action="/" id="form_board">
-        <div class="img_box">
-            <div class="head_photo"></div>
-        </div>
-
-        <textarea id="comment" name="comment" cols="45" rows="8" placeholder="有什么想说的？尽情说吧" maxlength="500" aria-required="true"></textarea>
-        <input type="button" value="添加留言">
-    </form>
+<div class="talk_box">
+    <div class="title_box">
+        <div class="nolz"></div><img src="/img/tezmlB.PNG"/>
+        <h3 class="nickName">admin</h3>
+        <p class="time">2016/6/23 下午2:53</p>
+    </div>
+    <div class="message clearfix">你们呀你们，navie！图样图森破。你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破你们呀你们，navie！图样图森破</div>
+</div>
 </body>
 </html>

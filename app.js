@@ -8,6 +8,7 @@ var app =express();
 var Blog=require("./models/blog.js");
 var Photo=require("./models/photo.js");
 var Board=require("./models/board.js");
+var Comment=require("./models/comment.js");
 var _=require('underscore');
 
 mongoose.connect("mongodb://localhost/tezml");
@@ -104,7 +105,7 @@ app.post('/blog/add/',function(req,res){
                 console.log(err)
             }
             _blog= _.extend(blog,blogObj);
-            _blog.save=(function(err,blog){
+            _blog.save(function(err,blog){
                 if(err){
                     console.log(err)
                 }
@@ -118,7 +119,9 @@ app.post('/blog/add/',function(req,res){
             outline:blogObj.outline,
             titleImg:blogObj.titleImg,
             createTime:blogObj.createTime,
-            inner:blogObj.inner
+            inner:blogObj.inner,
+            length:0,
+            comtent:[]
         });
         _blog.save(function(err,blog){
             if(err){
@@ -205,8 +208,36 @@ app.post('/board/add/',function(req,res) {
     });
 });
 
-
-
+//添加评论
+app.post('/comment/add/',function(req,res) {
+    var id=req.body.blogId;
+    var commentObj=req.body;
+    var _blog;
+    Blog.findById(id,function(err,blog){
+        if(err){
+            console.log(err)
+        }
+        var nBlog=blog;
+        var commentJson={
+            img:commentObj.img,
+            nickName:commentObj.nickName,
+            time:commentObj.time,
+            message:commentObj.message,
+            reply:[],
+            lou:commentObj.lou
+        }
+        nBlog.comment.push(commentJson);
+        _blog= _.extend(blog,nBlog);
+        _blog.save(function(err,blog){
+            if(err){
+                console.log(err)
+            }
+            res.send(JSON.stringify(blog));
+            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+            res.end();
+        })
+    })
+});
 
 
 
@@ -262,16 +293,31 @@ app.get('/contact/',function(req,res){
 });
 app.get('/inner/:id',function(req,res){
     var id=req.params.id;
+    var nBlog;
     Blog.findById(id,function(err,blog){
-        console.log(blog);
         if(err){
             console.log(err)
         }
-        res.render("inner",{
-            classSeleced:"Tezml",
-            data:blog
-        })
-    });
+        var _blog=blog;
+        _blog.length=_blog.length+1;
+        nBlog= _.extend(blog,_blog);
+        nBlog.save(function(err,blog){
+            if(err){
+                console.log(err)
+            }
+            res.render("inner",{
+                classSeleced:"Tezml",
+                data:blog
+            })
+            res.end();
+        });
+    })
+
+
+
+
+
+
 });
 app.get('/photo/:type',function(req,res){
     var type=req.params.type;
@@ -279,7 +325,6 @@ app.get('/photo/:type',function(req,res){
         if(err){
             console.log(err)
         }
-        console.log(data)
         res.render("photo",{
             classSeleced:"Tezml",
             data:data
