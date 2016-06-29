@@ -1,4 +1,10 @@
 var mongoose=require('mongoose');
+/*var Comment = new Schema({
+    img  :String,
+    nickName   :String,
+    time   :String,
+    message  :String
+});*/
 var blogScema= new mongoose.Schema({
     title:String,
     outline:String,
@@ -6,7 +12,23 @@ var blogScema= new mongoose.Schema({
     createTime:String,
     inner:String,
     length:Number,
-    comment:Array
+    comment:[
+        {
+            img  :String,
+            nickName   :String,
+            time   :String,
+            message  :String,
+            reply:[
+                {
+                    img  :String,
+                    nickName   :String,
+                    time   :String,
+                    message  :String
+                }
+            ],
+            lou:Number
+        }
+    ]
 });
 
 blogScema.pre("save",function(next){

@@ -28,10 +28,19 @@ block content
                             h3.nickName #{item.nickName}
                             .time_box
                                 p.time #{item.time}
-                                a.relpy 回复
+                                a.relpy(lou="#{item.lou}") 回复
                         .message.clearfix
                             | #{item.message}
-
+                    each i in item.reply
+                        .talk_box_s
+                            .title_box
+                                div.nolz
+                                img(src='#{i.img}')
+                                h3.nickName #{i.nickName}
+                                .time_box
+                                    p.time #{i.time}
+                            .message.clearfix
+                                | #{i.message}
                 form#form_reply(action='')
                     h4  发表评论
                     label(for='nikeName')

@@ -377,11 +377,11 @@ form .title{
 }
 #form_board{
     background: #f0efee;
-    margin-left: 300px;
-    position: fixed;
+    margin-left: 250px;
     left: 0px;
     top: 0px;
     width: 100%;
+
 }
 #form_board .submit{
     margin-left: 100px;

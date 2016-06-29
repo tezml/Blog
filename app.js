@@ -238,11 +238,10 @@ app.post('/comment/add/',function(req,res) {
                     console.log(err)
                 }
                 res.send(JSON.stringify(blog));
-                res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
                 res.end();
             })
         }else if(type=="reply"){
-            var lou=req.body.lou;
+            var lou=Number(req.body.lou)-1;
             var Sblog=blog;
             var commentJson={
                 img:commentObj.img,
@@ -250,16 +249,17 @@ app.post('/comment/add/',function(req,res) {
                 time:commentObj.time,
                 message:commentObj.message
             };
-            Sblog.reply[lou].push(commentJson);
-            console.log(Sblog);
+
+            Sblog.comment[lou].reply.push(commentJson);
             Sblog.save(function(err,blog){
                 if(err){
                     console.log(err)
                 }
+                console.log(blog);
                 res.send(JSON.stringify(blog));
-                res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
                 res.end();
             })
+
         }
     })
 
@@ -331,10 +331,12 @@ app.get('/inner/:id',function(req,res){
             if(err){
                 console.log(err)
             }
+            console.log(blog);
             res.render("inner",{
                 classSeleced:"Tezml",
                 data:blog
-            })
+            });
+            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"})
             res.end();
         });
     })
