@@ -1,4 +1,4 @@
-var port =process.env.PORT || 80;
+var port =process.env.PORT || 800;
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -13,8 +13,8 @@ var _=require('underscore');
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hello World\n');
-}).listen(80, '169.254.62.142');
-console.log('Server running at http://169.254.62.142:80/');
+}).listen(800, '169.254.62.142');
+console.log('Server running at http://169.254.62.142:800/');
 mongoose.connect("mongodb://localhost/tezml");
 
 app.set('views','./jade/pages');//视图
