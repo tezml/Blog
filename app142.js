@@ -16,7 +16,7 @@ mongoose.connect("mongodb://localhost/tezml");
 app.set('views','./jade/pages');//视图
 app.set('view engine', 'jade');//模板引擎
 app.use(express.static(path.join(__dirname, 'public')));
-app.listen('80',"169.254.62.142");
+app.listen("169.254.62.142");
 
 var bodyParser = require('body-parser');
 var ueditor = require("ueditor");
