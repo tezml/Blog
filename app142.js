@@ -10,17 +10,17 @@ var Photo=require("./models/photo.js");
 var Board=require("./models/board.js");
 var Comment=require("./models/comment.js");
 var _=require('underscore');
-http.createServer(function (req, res) {
+/*http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World\n');
-}).listen(800, '169.254.62.142');
+    res.end('/');
+}).listen(800, '169.254.62.142');*/
 console.log('Server running at http://169.254.62.142:800/');
 mongoose.connect("mongodb://localhost/tezml");
 
 app.set('views','./jade/pages');//视图
 app.set('view engine', 'jade');//模板引擎
 app.use(express.static(path.join(__dirname, 'public')));
-/*app.listen("169.254.62.142");*/
+app.listen(800, '169.254.62.142');
 
 var bodyParser = require('body-parser');
 var ueditor = require("ueditor");
