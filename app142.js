@@ -13,7 +13,7 @@ var _=require('underscore');
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hello World\n');
-}).listen(80, '169.254.62.142');
+}).listen(3000, '169.254.62.142');
 console.log('Server running at http://169.254.62.142:80/');
 mongoose.connect("mongodb://localhost/tezml");
 
