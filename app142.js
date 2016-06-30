@@ -10,6 +10,7 @@ var Photo=require("./models/photo.js");
 var Board=require("./models/board.js");
 var Comment=require("./models/comment.js");
 var _=require('underscore');
+http.response.writeHead(200, {'Content-Type': 'text/html'});
 /*http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('/');
