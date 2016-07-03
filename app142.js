@@ -1,4 +1,4 @@
-var port =process.env.PORT || 800;
+var port =process.env.PORT || 80;
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -97,7 +97,7 @@ app.post('/blog/content/',function(req,res){
         }
         var json={inner:blog.inner};
         res.send(JSON.stringify(json));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
         res.write(blog.inner);
         res.end();
     });
@@ -174,7 +174,7 @@ app.post('/photo/addPhoto/',function(req,res){
         data.titleImg=photoObj.titleImg;
         _photo= new Photo(data);
         /*res.send(JSON.stringify(data));
-         res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+         res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
          res.end();*/
         _photo.save(function(err,photo){
             if(err){
@@ -194,7 +194,7 @@ app.post('/photo/info/',function(req,res) {
     var type=photoObj.type;
     Photo.findById(type,function(err,data){
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
         res.end();
     });
 });
@@ -213,7 +213,7 @@ app.post('/board/add/',function(req,res) {
             console.log(err)
         }
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
         res.end();
     });
 });
@@ -346,7 +346,7 @@ app.get('/inner/:id',function(req,res){
                 classSeleced:"Tezml",
                 data:blog
             });
-            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"})
+            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"})
             res.end();
         });
     })
