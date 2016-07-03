@@ -1,4 +1,4 @@
-var port =process.env.PORT || 80;
+var port =process.env.PORT || 800;
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -23,7 +23,7 @@ var server = http.createServer(app);
 server.listen(app.get('port'), function () {
     console.log('Server running at http://169.254.62.142:800/');
 });
-mongoose.connect("mongodb://localhost/tezml");
+mongoose.connect("mongodb://tezml");
 
 
 //app.listen(800, '169.254.62.142');
