@@ -1,4 +1,6 @@
 $(function(){
+    $(".top").css("background",'url("../img/bj'+tools.rnd(1,4)+'.png") repeat scroll 50% 50%');
+
     var _id=$(".content").attr("sid");
     //加载博客信息
     $.ajax({

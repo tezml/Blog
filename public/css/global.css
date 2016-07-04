@@ -377,7 +377,7 @@ form .title{
 }
 #form_board{
     background: #f0efee;
-    margin-left: 250px;
+    margin-left: 300px;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -412,9 +412,9 @@ form .title{
     color: #FFFFFF;
     font-size: 20px;
     padding: 20px;
-    width: 600px;
-    height: 79px;
-    margin-bottom: 28px;
+    /*width: 600px;*/
+    height: 74px;
+    margin-bottom: 27px;
 }
 .head_photo{
     width: 80px;
@@ -435,4 +435,10 @@ form .title{
     border-top: 1px solid #cccccc;
     margin-top: 20px;
     padding: 20px;
+}
+:placeholder {
+    color:#ffffff;
+}
+::-webkit-input-placeholder {
+    color:#ffffff;
 }

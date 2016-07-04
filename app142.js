@@ -129,6 +129,7 @@ app.post('/blog/add/',function(req,res){
         outline:blogObj.outline,
         titleImg:blogObj.titleImg,
         createTime:blogObj.createTime,
+        timeOriginal:Date.now(),
         inner:blogObj.inner,
         length:0,
         comtent:[]

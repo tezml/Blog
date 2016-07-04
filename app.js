@@ -87,8 +87,7 @@ app.post('/blog/content/',function(req,res){
         }
         var json={inner:blog.inner};
         res.send(JSON.stringify(json));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
-        res.write(blog.inner);
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
         res.end();
     });
 });
@@ -120,6 +119,7 @@ app.post('/blog/add/',function(req,res){
             titleImg:blogObj.titleImg,
             createTime:blogObj.createTime,
             inner:blogObj.inner,
+            timeOriginal:Date.now(),
             length:0,
             comtent:[]
         });
@@ -184,7 +184,7 @@ app.post('/photo/info/',function(req,res) {
     var type=photoObj.type;
     Photo.findById(type,function(err,data){
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
         res.end();
     });
 });
@@ -203,7 +203,7 @@ app.post('/board/add/',function(req,res) {
             console.log(err)
         }
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
         res.end();
     });
 });
@@ -336,7 +336,7 @@ app.get('/inner/:id',function(req,res){
                 classSeleced:"Tezml",
                 data:blog
             });
-            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"})
+           // res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"})
             res.end();
         });
     })

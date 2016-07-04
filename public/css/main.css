@@ -397,7 +397,7 @@ h5, h6          { font-weight: bolder }
     overflow: hidden;
     display: block;
     position: relative;
-    background: url('../img/hero_image.jpg') no-repeat;
+    /*background: url('../img/hero_image.jpg') no-repeat;*/
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -480,13 +480,18 @@ h5, h6          { font-weight: bolder }
     line-height: 22px;
     padding: 60px 30px;
     background: #fff;
-    min-height: 1000px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+.w1000{
+    min-height: 1000px;
+}
+.w1000 a{
+    color: #0000ee;
+    text-decoration: underline;
+}
 .content p{
 
 }
@@ -651,6 +656,7 @@ h5, h6          { font-weight: bolder }
     #map{
         margin: 0!important;
     }
+
 }
 
 @media (max-width:550px){

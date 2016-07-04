@@ -40,12 +40,13 @@ $(function(){
         var title=$(".title").val();
         var outline=ue.getContentTxt().substring(0,50);
         var titleImg=$(".cover_img").attr("src");
+        //2016/7/3 下午1:03
         var blog={
             //id:"1",
             title:title,
             outline:outline,
             titleImg:titleImg,
-            createTime:tools.getLocalTime(tools.getTimestamp()),
+            createTime:"2016/6/3 下午3:21",//tools.getLocalTime(tools.getTimestamp())
             inner:ue.getContent()
         };
 
