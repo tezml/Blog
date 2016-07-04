@@ -23,7 +23,7 @@ var server = http.createServer(app);
 server.listen(app.get('port'), function () {
     console.log('Server running at http://169.254.62.142:800/');
 });
-mongoose.connect("mongodb://tezml");
+mongoose.connect("mongodb://localhost/tezml");
 
 
 //app.listen(800, '169.254.62.142');
@@ -97,8 +97,8 @@ app.post('/blog/content/',function(req,res){
         }
         var json={inner:blog.inner};
         res.send(JSON.stringify(json));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
-        res.write(blog.inner);
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239:80"});
+        //res.write(blog.inner);
         res.end();
     });
 });
@@ -194,7 +194,7 @@ app.post('/photo/info/',function(req,res) {
     var type=photoObj.type;
     Photo.findById(type,function(err,data){
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
         res.end();
     });
 });
@@ -213,7 +213,7 @@ app.post('/board/add/',function(req,res) {
             console.log(err)
         }
         res.send(JSON.stringify(data));
-        res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
+       // res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"});
         res.end();
     });
 });
@@ -346,7 +346,7 @@ app.get('/inner/:id',function(req,res){
                 classSeleced:"Tezml",
                 data:blog
             });
-            res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"})
+           // res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://115.29.43.239"})
             res.end();
         });
     })
