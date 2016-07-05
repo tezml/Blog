@@ -41,20 +41,7 @@ blogScema.pre("save",function(next){
 
 blogScema.statics={
     fetch:function(cb){
-        var arr=this.find({}).exec(cb);
-        console.log(arr);
-        for(var i=0;i<arr.length;i++){
-            for(var j=i;j<arr.length;j++){
-                if(arr[i].timeOriginal<arr[j].timeOriginal){
-                    var tmp;
-                    tmp = arr[i].timeOriginal;
-                    arr[i].timeOriginal=arr[j].timeOriginal;
-                    arr[j].timeOriginal=tmp;
-                }
-                console.log(arr[j].timeOriginal)
-            }
-        }
-        return arr.exec(cb)
+        return this.find({}).sort("-timeOriginal").exec(cb)
     },
     findById:function(id,cb){
         return this
