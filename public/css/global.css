@@ -52,15 +52,19 @@
     font-size: 16px;
     height: 22px;
     margin: 10px 0;
-    overflow: hidden;
     padding: 0 10px;
-    white-space: pre-wrap;
-    word-break: break-all;
     word-wrap: break-word;
+    word-break: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .post-item-title a {
     color: #333;
     text-decoration:none;
+
+
+
 }
 .post-item-title a:hover {
     /*color: #97c000;*/

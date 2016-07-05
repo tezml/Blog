@@ -12,6 +12,7 @@ $(function(){
         dataType: 'json',
         success:function(res){
             $(".content").append(res.inner);
+            SyntaxHighlighter.all();
         }
     });
     //滑动解锁

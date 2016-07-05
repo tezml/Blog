@@ -629,7 +629,7 @@
             type: 'post',
             dataType: 'json',
             success:function(res){
-
+                alert("提交成功")
             }
         })
         }else{

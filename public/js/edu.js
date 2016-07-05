@@ -5,7 +5,7 @@ $(function(){
     },1000);
     var form=$('#form')[0];
     form.action="/ueditor/ue/";
-
+    //SyntaxHighlighter.Highlighter();
     var upload_cover = WebUploader.create({
         auto: true,
         chunked: false,
@@ -46,7 +46,7 @@ $(function(){
             title:title,
             outline:outline,
             titleImg:titleImg,
-            createTime:"2016/6/3 下午3:21",//tools.getLocalTime(tools.getTimestamp())
+            createTime:"2016/6/11 下午9:12",//tools.getLocalTime(tools.getTimestamp())
             inner:ue.getContent()
         };
 
