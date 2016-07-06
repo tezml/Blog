@@ -29,9 +29,11 @@
           <file leaf-file-name="global.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/css/global.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="10859" max-vertical-offset="12231">
-                  <caret line="420" column="24" selection-start-line="420" selection-start-column="24" selection-end-line="420" selection-end-column="24" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="8480" max-vertical-offset="9060">
+                  <caret line="424" column="17" selection-start-line="424" selection-start-column="17" selection-end-line="424" selection-end-column="17" />
+                  <folding>
+                    <marker date="1467803935555" expanded="true" signature="860:1032" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -39,7 +41,7 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="12869" max-vertical-offset="18279">
+                <state vertical-scroll-proportion="0.0" vertical-offset="9840" max-vertical-offset="13540">
                   <caret line="492" column="31" selection-start-line="492" selection-start-column="31" selection-end-line="492" selection-end-column="31" />
                   <folding />
                 </state>
@@ -49,7 +51,7 @@
           <file leaf-file-name="edu.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/edu.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2052">
+                <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1520">
                   <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
                   <folding />
                 </state>
@@ -59,9 +61,14 @@
           <file leaf-file-name="upload.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/upload.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="16610" max-vertical-offset="18549">
-                  <caret line="628" column="25" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="12580" max-vertical-offset="13740">
+                  <caret line="629" column="25" selection-start-line="629" selection-start-column="25" selection-end-line="629" selection-end-column="25" />
+                  <folding>
+                    <marker date="1467803935869" expanded="true" signature="20160:20657" placeholder="{...}" />
+                    <marker date="1467803935869" expanded="true" signature="20206:20588" placeholder="{...}" />
+                    <marker date="1467803935869" expanded="true" signature="20272:20573" placeholder="{&quot;url&quot;: '/photo/addPhoto/'...}" />
+                    <marker date="1467803935869" expanded="true" signature="20542:20566" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -69,9 +76,12 @@
           <file leaf-file-name="inner.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/inner.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="2187">
-                  <caret line="8" column="15" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="15" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1620">
+                  <caret line="10" column="15" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="15" />
+                  <folding>
+                    <marker date="1467803935759" expanded="true" signature="218:438" placeholder="{&quot;url&quot;: '/blog/content/'...}" />
+                    <marker date="1467803935759" expanded="true" signature="407:434" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -79,7 +89,7 @@
           <file leaf-file-name="photo.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/schemas/photo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+                <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="680">
                   <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
                   <folding />
                 </state>
@@ -89,15 +99,9 @@
           <file leaf-file-name="photo.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/photo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.22798553" vertical-offset="324" max-vertical-offset="4455">
-                  <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#2591#4285#0" expanded="false" />
-                    <element signature="e#4321#4513#0" expanded="false" />
-                    <element signature="e#4539#4736#0" expanded="false" />
-                    <element signature="e#4764#4983#0" expanded="false" />
-                    <element signature="e#5022#5113#0" expanded="false" />
-                  </folding>
+                <state vertical-scroll-proportion="0.9546999" vertical-offset="3617" max-vertical-offset="4600">
+                  <caret line="223" column="3" selection-start-line="65" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -105,15 +109,9 @@
           <file leaf-file-name="zoom.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/lib/zoom.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-24.033333" vertical-offset="1142" max-vertical-offset="2079">
+                <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3220">
                   <caret line="153" column="9" selection-start-line="1" selection-start-column="4" selection-end-line="153" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#463#2349#0" expanded="false" />
-                    <element signature="e#2377#2533#0" expanded="false" />
-                    <element signature="e#2557#2718#0" expanded="false" />
-                    <element signature="e#2745#2910#0" expanded="false" />
-                    <element signature="e#2947#3023#0" expanded="false" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -125,8 +123,8 @@
           <file leaf-file-name="blog.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jade/pages/blog.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-                  <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+                  <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -135,9 +133,11 @@
           <file leaf-file-name="inner.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jade/pages/inner.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1647">
-                  <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1220">
+                  <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+                  <folding>
+                    <marker date="1467803935430" expanded="true" signature="23:2707" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -145,7 +145,7 @@
           <file leaf-file-name="header.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/jade/includes/header.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1026">
+                <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="760">
                   <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
                   <folding />
                 </state>
@@ -155,8 +155,8 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="6480">
-                  <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="291" selection-end-column="3" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="2020" max-vertical-offset="4800">
+                  <caret line="294" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="315" selection-end-column="3" />
                   <folding>
                     <element signature="e#1432#1551#0" expanded="false" />
                     <element signature="e#1620#1863#0" expanded="false" />
@@ -173,11 +173,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="photo.jade" pinned="false" current-in-tab="false">
+          <file leaf-file-name="photo.jade" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/jade/pages/photo.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.4017857" vertical-offset="0" max-vertical-offset="896">
+                  <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -186,7 +186,7 @@
           <file leaf-file-name="tezml.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/js/tezml.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="891">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
                   <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
                   <folding />
                 </state>
@@ -196,8 +196,8 @@
           <file leaf-file-name="app142.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app142.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3191" max-vertical-offset="7830">
-                  <caret line="291" column="19" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="3240" max-vertical-offset="5800">
+                  <caret line="316" column="16" selection-start-line="316" selection-start-column="16" selection-end-line="316" selection-end-column="16" />
                   <folding>
                     <element signature="e#1296#1896#0" expanded="false" />
                     <element signature="e#1964#2207#0" expanded="false" />
@@ -208,16 +208,6 @@
                     <element signature="e#5422#5867#0" expanded="false" />
                     <element signature="e#5921#7430#0" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="简易瀑布流3.html" pinned="false" current-in-tab="true">
-            <entry file="file://C:/Users/Administrator.A-201512131145/Desktop/js/2015-2-2/code/简易瀑布流3.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.7715675" vertical-offset="1458" max-vertical-offset="2295">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -270,16 +260,16 @@
         <option value="$PROJECT_DIR$/schemas/blog.js" />
         <option value="$PROJECT_DIR$/jade/pages/createBlog.jade" />
         <option value="$PROJECT_DIR$/jade/pages/inner.jade" />
-        <option value="$PROJECT_DIR$/jade/pages/blog.jade" />
         <option value="$PROJECT_DIR$/public/js/edu.js" />
         <option value="$PROJECT_DIR$/public/js/upload.js" />
         <option value="$PROJECT_DIR$/public/css/global.css" />
         <option value="$PROJECT_DIR$/public/js/inner.js" />
         <option value="$PROJECT_DIR$/public/js/lib/zoom.js" />
-        <option value="$PROJECT_DIR$/jade/pages/photo.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app142.js" />
+        <option value="$PROJECT_DIR$/jade/pages/blog.jade" />
         <option value="$PROJECT_DIR$/public/js/photo.js" />
+        <option value="$PROJECT_DIR$/jade/pages/photo.jade" />
       </list>
     </option>
   </component>
@@ -415,7 +405,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="E:/emacle/tags/7.2.1本地归档" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="preferences.keymap" />
@@ -426,21 +416,21 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <setting name="preferredDebugBrowser" value="!browsers.chrome!" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -459,7 +449,6 @@
       <node-options />
       <gulpfile />
       <tasks />
-      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -502,9 +491,9 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -530,6 +519,108 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/schemas/photo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="680">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/photo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="260">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/zoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3220">
+          <caret line="153" column="9" selection-start-line="1" selection-start-column="4" selection-end-line="153" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/pages/blog.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/pages/inner.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1180">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding>
+            <marker date="1467803935430" expanded="true" signature="23:2707" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/includes/header.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="760">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1520" max-vertical-offset="4320">
+          <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="291" selection-end-column="3" />
+          <folding>
+            <element signature="e#1432#1551#0" expanded="false" />
+            <element signature="e#1620#1863#0" expanded="false" />
+            <element signature="e#1919#2157#0" expanded="false" />
+            <element signature="e#2211#2582#0" expanded="false" />
+            <element signature="e#2632#3698#0" expanded="false" />
+            <element signature="e#3751#4089#0" expanded="false" />
+            <element signature="e#4145#4821#0" expanded="false" />
+            <element signature="e#4884#5167#0" expanded="false" />
+            <element signature="e#5221#5667#0" expanded="false" />
+            <element signature="e#5721#7230#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/pages/photo.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="520">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/tezml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="660">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app142.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2740" max-vertical-offset="5320">
+          <caret line="291" column="19" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+          <folding>
+            <element signature="e#1296#1896#0" expanded="false" />
+            <element signature="e#1964#2207#0" expanded="false" />
+            <element signature="e#2263#2501#0" expanded="false" />
+            <element signature="e#2555#2961#0" expanded="false" />
+            <element signature="e#4346#5023#0" expanded="false" />
+            <element signature="e#5086#5368#0" expanded="false" />
+            <element signature="e#5422#5867#0" expanded="false" />
+            <element signature="e#5921#7430#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/webuploader.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29017857" vertical-offset="0" max-vertical-offset="896">
@@ -597,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,41 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/emacle/协同/eoa/code/eoa1.0/eoa_web/resources/spring-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.56577414" vertical-offset="486" max-vertical-offset="1404">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/emacle/协同/calendar/code/calendar_server_1.0/calendar_api_server/WebContent/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3078">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/emacle/协同/calendar/code/calendar_server_1.0/calendar_api_server/WebContent/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="872">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/emacle/协同/calendar/code/calendar_server_1.0/calendar_api_server/resources/conf/test/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37718278" vertical-offset="0" max-vertical-offset="859">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/emacle/协同/calendar/code/calendar_server_1.0/calendar_web/WebContent/jsp/index_mobile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2855407" vertical-offset="1088" max-vertical-offset="37098">
-          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18577981" vertical-offset="0" max-vertical-offset="872">
@@ -682,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="864">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,22 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
           <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Users/Administrator.A-201512131145/Desktop/js/2015-1-23/code/排序3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32806805" vertical-offset="0" max-vertical-offset="1296">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/tezml.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="891">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,9 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="98847">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -745,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
           <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,13 +788,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="12869" max-vertical-offset="18279">
           <caret line="492" column="31" selection-start-line="492" selection-start-column="31" selection-end-line="492" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/owo/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="848">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -800,41 +827,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16610" max-vertical-offset="18549">
-          <caret line="628" column="25" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jade/pages/blog.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="12580" max-vertical-offset="13740">
+          <caret line="629" column="25" selection-start-line="629" selection-start-column="25" selection-end-line="629" selection-end-column="25" />
+          <folding>
+            <marker date="1467803935869" expanded="true" signature="20160:20657" placeholder="{...}" />
+            <marker date="1467803935869" expanded="true" signature="20206:20588" placeholder="{...}" />
+            <marker date="1467803935869" expanded="true" signature="20272:20573" placeholder="{&quot;url&quot;: '/photo/addPhoto/'...}" />
+            <marker date="1467803935869" expanded="true" signature="20542:20566" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10859" max-vertical-offset="12231">
-          <caret line="420" column="24" selection-start-line="420" selection-start-column="24" selection-end-line="420" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8480" max-vertical-offset="9060">
+          <caret line="424" column="17" selection-start-line="424" selection-start-column="17" selection-end-line="424" selection-end-column="17" />
+          <folding>
+            <marker date="1467803935555" expanded="true" signature="860:1032" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jade/pages/inner.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1647">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1220">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <marker date="1467803935430" expanded="true" signature="23:2707" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/inner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="2187">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="15" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1620">
+          <caret line="10" column="15" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <marker date="1467803935759" expanded="true" signature="218:438" placeholder="{&quot;url&quot;: '/blog/content/'...}" />
+            <marker date="1467803935759" expanded="true" signature="407:434" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -848,30 +879,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/zoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.033333" vertical-offset="1142" max-vertical-offset="2079">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3220">
           <caret line="153" column="9" selection-start-line="1" selection-start-column="4" selection-end-line="153" selection-end-column="9" />
-          <folding>
-            <element signature="e#463#2349#0" expanded="false" />
-            <element signature="e#2377#2533#0" expanded="false" />
-            <element signature="e#2557#2718#0" expanded="false" />
-            <element signature="e#2745#2910#0" expanded="false" />
-            <element signature="e#2947#3023#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jade/pages/photo.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="6480">
-          <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="291" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2020" max-vertical-offset="4800">
+          <caret line="294" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="315" selection-end-column="3" />
           <folding>
             <element signature="e#1432#1551#0" expanded="false" />
             <element signature="e#1620#1863#0" expanded="false" />
@@ -887,26 +904,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Users/Administrator.A-201512131145/Desktop/js/2015-2-3/code/瀑布流.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5744681" vertical-offset="1296" max-vertical-offset="2754">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Users/Administrator.A-201512131145/Desktop/js/2015-2-2/code/简易瀑布流2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6420526" vertical-offset="972" max-vertical-offset="2295">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app142.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3272" max-vertical-offset="7830">
-          <caret line="291" column="19" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3240" max-vertical-offset="5800">
+          <caret line="316" column="16" selection-start-line="316" selection-start-column="16" selection-end-line="316" selection-end-column="16" />
           <folding>
             <element signature="e#1296#1896#0" expanded="false" />
             <element signature="e#1964#2207#0" expanded="false" />
@@ -920,25 +921,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Users/Administrator.A-201512131145/Desktop/js/2015-2-2/code/简易瀑布流3.html">
+    <entry file="file://$PROJECT_DIR$/jade/pages/blog.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7715675" vertical-offset="1458" max-vertical-offset="2295">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/tezml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="891">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/photo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22798553" vertical-offset="324" max-vertical-offset="4455">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#2591#4285#0" expanded="false" />
-            <element signature="e#4321#4513#0" expanded="false" />
-            <element signature="e#4539#4736#0" expanded="false" />
-            <element signature="e#4764#4983#0" expanded="false" />
-            <element signature="e#5022#5113#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.9546999" vertical-offset="3617" max-vertical-offset="4600">
+          <caret line="223" column="3" selection-start-line="65" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jade/pages/photo.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4017857" vertical-offset="0" max-vertical-offset="896">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
