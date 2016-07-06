@@ -38,9 +38,10 @@ $(function(){
 
     window.onscroll=function(){
         var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-        if(scrollTop>=document.body.scrollHeight-document.documentElement.clientHeight-1){
-            create();
+        if(scrollTop>=document.body.scrollHeight-document.documentElement.clientHeight-100){
+            create()
         }
+
     };
 
 
