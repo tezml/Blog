@@ -9,7 +9,7 @@
 	    windowWidth = $(window).width(),
 	    windowHeight = $(window).height();
 		
-	function open(event) {
+	 var open=function(event) {
 		if (event) {
 			event.preventDefault();
 		}
