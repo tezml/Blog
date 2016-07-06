@@ -265,7 +265,31 @@ app.post('/comment/add/',function(req,res) {
 
 });
 
+//图片分次加载
 
+app.post('/photo/show/',function(req,res) {
+    var type=req.body.type;
+    var s=Number(req.body.s);
+    var now=Number(req.body.now);
+    Photo.findById(type,function(err,data){
+        if(err){
+            console.log(err)
+        }
+        var state=false;
+        if(now>=data.img.length){
+            state=true
+        }
+        var arr=[];
+        var all=s+now>=data.img.length?data.img.length:s+now;
+        for (var i = now; i < all; i++) {
+            arr.push(data.img[i])
+        }
+        var json={img:arr,now:now+s,state:state};
+        res.send(JSON.stringify(json));
+        //res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost:3000"});
+        res.end();
+    });
+});
 
 
 
