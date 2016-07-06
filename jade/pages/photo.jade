@@ -6,10 +6,10 @@ block content
         script(type='text/javascript', src='/js/lib/modernizr.custom.js')
         section#box.main
                 ul#grid.grid.clearfix.effect-8.gallery
-                each  item in data.img
-                        li.item
-                                a(href="#{item}")
-                                        img(src='#{item}')
+                        each  item in data.img
+                                li.item
+                                      a(href="#{item}")
+                                              img(src='#{item}')
 
 
         script(type='text/javascript', src='/js/lib/masonry.pkgd.min.js')
