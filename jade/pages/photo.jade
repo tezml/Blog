@@ -4,17 +4,12 @@ block content
         link(rel='stylesheet', type='text/css', href='/css/default.css')
         link(rel='stylesheet', type='text/css', href='/css/zoom.css')
         script(type='text/javascript', src='/js/lib/modernizr.custom.js')
-        section#box.main
-                ul#grid.grid.clearfix.effect-8.gallery
-                        each  item in data.img
-                                li.item
-                                      a(href="#{item}")
-                                              img(src='#{item}')
+        section#box.main(type="#{data.type}")
+            ul#grid.grid.clearfix.effect-8.gallery
 
 
         script(type='text/javascript', src='/js/lib/masonry.pkgd.min.js')
         script(type='text/javascript', src='/js/lib/imagesloaded.js')
         script(type='text/javascript', src='/js/lib/classie.js')
         script(type='text/javascript', src='/js/lib/AnimOnScroll.js')
-        script(type='text/javascript', src='/js/lib/zoom.js')
         script(type='text/javascript', src='/js/photo.js')
