@@ -21,26 +21,45 @@
             success:function(res){
                 if(res.state==false){
                     now=res.now;
-
+                    var arr=[];
+                    var old=$("#grid .item").length
                     $.each(res.img,function(i){
-                        var img = new Image();
-                        img.onload = function() {
-                            $("#grid").append("<li class='item'><div class='loading'></div><a href='" + res.img[i] + "'></a></li>");
-                            img.src=res.img[i];
-                            $("#grid .item a").eq(i).append(img);
-                            $("#grid .loading").eq(i).hide();
-                        }
+                        arr.push(res.img[i]);
+                        $("#grid").append("<li class='item'><div class='loading'></div><a href='" + res.img[i] + "'></a></li>");
                     });
+                    tpage(0);
+                    function tpage(num){
+                        if(num<=arr.length) {
+                            var img = new Image();
+                            img.src = arr[num];
+                            img.onload = function () {
+                                console.log(old);
+                                $("#grid .item a").eq(old+num).append(img);
+                                $("#grid .loading").eq(old+num).hide();
+                                new AnimOnScroll( document.getElementById( 'grid' ), {
+                                    minDuration : 0.1,
+                                    maxDuration : 0.6,
+                                    viewportFactor : 0.2
+                                } );
+                                $('.zoom, .gallery a').unbind();
+                                $('.zoom, .gallery a').on('click', open);
+                            };
+                            tpage(num + 1);
+                        }
+                    }
+
+                    new AnimOnScroll( document.getElementById( 'grid' ), {
+                        minDuration : 0.1,
+                        maxDuration : 0.6,
+                        viewportFactor : 0.2
+                    } );
+                    $('.zoom, .gallery a').unbind();
+                    $('.zoom, .gallery a').on('click', open);
+
                 }
             },
             complete:function(){
-                new AnimOnScroll( document.getElementById( 'grid' ), {
-                    minDuration : 0.1,
-                    maxDuration : 0.6,
-                    viewportFactor : 0.2
-                } );
-                $('.zoom, .gallery a').unbind();
-                $('.zoom, .gallery a').on('click', open);
+
                 loading=false;
             }
         });
