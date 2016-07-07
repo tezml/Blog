@@ -446,3 +446,13 @@ form .title{
 ::-webkit-input-placeholder {
     color:#ffffff;
 }
+.loading{
+    background: url("../img/loading.gif");
+    height: 55px;
+    left: 50%;
+    margin-left: -22px;
+    margin-top: 22px;
+    position: relative;
+    top: 50%;
+    width: 54px;
+}
