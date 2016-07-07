@@ -1,4 +1,6 @@
-$(function(){
+/*$(function(){
+
+});*/
     $("header").css("width","300px");
     var now=0;
     var xmlhttp;
@@ -20,7 +22,10 @@ $(function(){
                 if(res.state==false){
                     now=res.now;
                     $.each(res.img,function(i){
-                        $("#grid").append("<li class='item'><a href='"+res.img[i]+"'><img src='"+res.img[i]+"'/></a></li>")
+                        $("#grid").append("<li class='item'><div class='loading'></div><a href='"+res.img[i]+"'><img src='"+res.img[i]+"'/></a></li>")
+                    });
+                    $('#grid img').load(function(){
+                        $(this).parents(".item").find(".loading").hide();
                     });
                 }
             },
@@ -220,4 +225,3 @@ $(function(){
             event.cancelBubble = false;
         });
     })();
-});
