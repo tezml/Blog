@@ -21,11 +21,15 @@
             success:function(res){
                 if(res.state==false){
                     now=res.now;
+
                     $.each(res.img,function(i){
-                        $("#grid").append("<li class='item'><div class='loading'></div><a href='"+res.img[i]+"'><img src='"+res.img[i]+"'/></a></li>")
-                        $("#grid img").eq(i).load(function() {
-                            $(this).parents(".item").find(".loading").hide();
-                        })
+                        var img = new Image();
+                        img.onload = function() {
+                            $("#grid").append("<li class='item'><div class='loading'></div><a href='" + res.img[i] + "'></a></li>");
+                            img.src=res.img[i];
+                            $("#grid .item a").eq(i).append(img);
+                            $("#grid .loading").eq(i).hide();
+                        }
                     });
                 }
             },
