@@ -1,6 +1,4 @@
-/*$(function(){
 
-});*/
     $("header").css("width","300px");
     var now=0;
     var xmlhttp;
@@ -22,20 +20,21 @@
                 if(res.state==false){
                     now=res.now;
                     var arr=[];
-                    var old=$("#grid .item").length
+                    var old=$("#grid .item").length;
                     $.each(res.img,function(i){
                         arr.push(res.img[i]);
                         $("#grid").append("<li class='item'><div class='loading'></div><a href='" + res.img[i] + "'></a></li>");
                     });
                     tpage(0);
                     function tpage(num){
+                        //arr:图片数组，10张图片
                         if(num<=arr.length) {
                             var img = new Image();
                             img.src = arr[num];
                             img.onload = function () {
-                                console.log(old);
                                 $("#grid .item a").eq(old+num).append(img);
                                 $("#grid .loading").eq(old+num).hide();
+                                //加载瀑布流工具
                                 new AnimOnScroll( document.getElementById( 'grid' ), {
                                     minDuration : 0.1,
                                     maxDuration : 0.6,
@@ -59,7 +58,6 @@
                 }
             },
             complete:function(){
-
                 loading=false;
             }
         });
