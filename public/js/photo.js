@@ -23,9 +23,9 @@
                     now=res.now;
                     $.each(res.img,function(i){
                         $("#grid").append("<li class='item'><div class='loading'></div><a href='"+res.img[i]+"'><img src='"+res.img[i]+"'/></a></li>")
-                    });
-                    $('#grid img').load(function(){
-                        $(this).parents(".item").find(".loading").hide();
+                        $("#grid img").eq(i).load(function() {
+                            $(this).parents(".item").find(".loading").hide();
+                        })
                     });
                 }
             },
